@@ -3,7 +3,7 @@
     <div class="container pt-14 xl:pt-6 lg:pt-6 pb-16 xl:pb-20 lg:pb-20 md:pb-20">
         <div class="xl:!flex lg:!flex flex-row xl:!items-center lg:!items-center">
             <h3 class="xl:!text-[2.1rem] !text-[calc(1.335rem_+_1.02vw)] !leading-[1.2] !mb-6 lg:!mb-0 xl:!mb-0 xl:!pr-40 lg:!pr-40 xxl:!pr-[22.5rem] !text-white">
-                Join our community by using our services and grow your business.</h3>
+                Создаём, развиваем и поддерживаем сайты, которые работают на бизнес.</h3>
         </div>
         <!--/div -->
         <hr class="!mt-[3rem] !mb-[3.5rem] opacity-100 m-[4.5rem_0] border-t border-solid border-[rgba(164,174,198,.2)]">
