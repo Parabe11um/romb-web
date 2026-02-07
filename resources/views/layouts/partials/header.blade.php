@@ -3,7 +3,7 @@
         <div class="container xl:!flex-row lg:!flex-row !flex-nowrap items-center">
             <div class="navbar-brand w-full">
                 <a href="/">
-                    <img class="scale-200" src="{{asset('images/logo.svg')}}" srcset="{{asset('images/logo.svg 2x')}}"
+                    <img src="{{asset('images/logo.svg')}}" srcset="{{asset('images/logo.svg')}}"
                          alt="image">
                 </a>
             </div>
@@ -23,7 +23,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link font-bold !tracking-[-0.01rem] hover:!text-[#54a8c7] after:!text-[#54a8c7]"
-                               href="#" data-bs-toggle="dropdown">Услуги</a>
+                               href="{{ route('services.index') }}" >Услуги</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link font-bold !tracking-[-0.01rem] hover:!text-[#54a8c7] after:!text-[#54a8c7]"
