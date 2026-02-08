@@ -27,11 +27,11 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link font-bold !tracking-[-0.01rem] hover:!text-[#54a8c7] after:!text-[#54a8c7]"
-                               href="#" data-bs-toggle="dropdown">Проекты</a>
+                               href="{{ route('projects.index') }}" >Проекты</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link font-bold !tracking-[-0.01rem] hover:!text-[#54a8c7] after:!text-[#54a8c7]"
-                               href="#" data-bs-toggle="dropdown">Статьи</a>
+                               href="#" >Статьи</a>
                         </li>
                     </ul>
                     <!-- /.navbar-nav -->

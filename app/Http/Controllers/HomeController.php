@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Models\Service;
 
 class HomeController extends Controller
 {
-    public function __invoke(Request $request)
+    public function index()
     {
-        return view('home');
+        $services = Service::where('is_active', true)->get();
+
+        $projects = Project::where('is_active', true)
+            ->latest()
+            ->limit(3)
+            ->get();
+
+        return view('home', compact('services', 'projects'));
     }
 }

@@ -2,7 +2,14 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ProjectController;
 
-Route::get('/', HomeController::class)->name('home');
-Route::view('/services', 'services.index')->name('services.index');
-Route::view('/services/detail', 'services.show')->name('services.show');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+Route::get('/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/projects/{slug}', [ProjectController::class, 'show'])->name('projects.show');
