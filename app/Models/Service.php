@@ -12,6 +12,8 @@ class Service extends Model
         'image',
         'excerpt',
         'content',
+        'meta_title',
+        'meta_description',
         'is_active',
     ];
 

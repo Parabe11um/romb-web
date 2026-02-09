@@ -13,6 +13,8 @@ class Project extends Model
         'detail_image',
         'excerpt',
         'content',
+        'meta_title',
+        'meta_description',
         'is_active',
     ];
 

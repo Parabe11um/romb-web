@@ -9,6 +9,7 @@ use App\Models\Service;
 use BackedEnum;
 use Filament\Forms\Components\Select;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
@@ -71,6 +72,20 @@ class ServiceResource extends Resource
             Toggle::make('is_active')
                 ->label('Активна')
                 ->default(true),
+
+            Section::make('SEO')
+                ->schema([
+                    TextInput::make('meta_title')
+                        ->label('Meta title')
+                        ->maxLength(70),
+
+                    Textarea::make('meta_description')
+                        ->label('Meta description')
+                        ->rows(3)
+                        ->maxLength(160),
+                ])
+                ->collapsed(),
+
         ]);
     }
 

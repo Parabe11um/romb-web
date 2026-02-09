@@ -16,6 +16,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
@@ -79,6 +80,22 @@ class ProjectResource extends Resource
             Toggle::make('is_active')
                 ->label('Активен')
                 ->default(true),
+
+
+            Section::make('SEO')
+                ->schema([
+                    TextInput::make('meta_title')
+                        ->label('Meta title')
+                        ->maxLength(70)
+                        ->helperText('Рекомендуемо до 60–70 символов'),
+
+                    Textarea::make('meta_description')
+                        ->label('Meta description')
+                        ->rows(3)
+                        ->maxLength(160)
+                        ->helperText('Рекомендуемо до 150–160 символов'),
+                ])
+                ->collapsed(),
         ]);
     }
 

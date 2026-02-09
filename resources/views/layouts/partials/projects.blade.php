@@ -1,5 +1,8 @@
 <section class="wrapper !bg-[#ffffff]">
-    <div class="container pt-14 xl:pt-[4.5rem] lg:pt-[4.5rem] md:pt-[4.5rem]">
+    <div class="container
+    pt-14 xl:pt-[4.5rem] lg:pt-[4.5rem] md:pt-[4.5rem]
+    pb-20 xl:pb-24 lg:pb-24 md:pb-24
+">
         <div class="flex flex-wrap mx-[-15px] !text-center">
             <div
                 class="md:w-10/12 xl:w-8/12 lg:w-8/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!ml-[16.66666667%] lg:!ml-[16.66666667%] md:!ml-[8.33333333%]">
@@ -8,7 +11,7 @@
                 </h2>
                 <h3
                     class="xl:!text-[2.1rem] !text-[calc(1.335rem_+_1.02vw)] !leading-[1.2] !mb-10 xxl:!px-10">
-                    Последние реализованные проекты
+                    Реализованные работы
                 </h3>
             </div>
         </div>
@@ -22,12 +25,14 @@
 
                     <div class="project item">
                         @if($project->preview_image)
-                            <figure class="lift rounded !mb-6">
-                                <a href="{{ route('projects.show', $project->slug) }}">
+                            <figure class="lift rounded !mb-6 overflow-hidden">
+                                <a href="{{ route('projects.show', $project->slug) }}"
+                                   class="block relative w-full aspect-[4/3]">
+
                                     <img
                                         src="{{ asset('storage/' . $project->preview_image) }}"
                                         alt="{{ $project->title }}"
-                                        class="rounded"
+                                        class="absolute inset-0 w-full h-full object-cover"
                                     >
                                 </a>
                             </figure>
@@ -50,7 +55,7 @@
                                 href="{{ route('projects.show', $project->slug) }}"
                                 class="more hover"
                             >
-                                Подробнее →
+                                Подробнее
                             </a>
                         </div>
                     </div>
