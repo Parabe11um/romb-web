@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="grow shrink-0">
         @include('layouts.partials.header')
         <!-- /header -->
 
@@ -14,8 +13,10 @@
         @include('layouts.partials.projects', ['projects' => $projects])
         <!-- /section project cards-->
 
+        @include('layouts.partials.articles', ['articles' => $articles])
+        <!-- /section article cards-->
+
         @include('layouts.partials.steps')
         <!-- /section with 3 steps -->
-    </div>
 
 @endsection

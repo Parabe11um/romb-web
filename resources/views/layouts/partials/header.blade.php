@@ -31,7 +31,11 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link font-bold !tracking-[-0.01rem] hover:!text-[#54a8c7] after:!text-[#54a8c7]"
-                               href="#" >Статьи</a>
+                               href="{{ route('articles.index') }}" >Статьи</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link font-bold !tracking-[-0.01rem] hover:!text-[#54a8c7] after:!text-[#54a8c7]"
+                               href="#" >Контакты</a>
                         </li>
                     </ul>
                     <!-- /.navbar-nav -->
