@@ -8,6 +8,7 @@ use App\Filament\Resources\Projects\Pages\ListProjects;
 use App\Filament\Resources\Projects\Schemas\ProjectForm;
 use App\Filament\Resources\Projects\Tables\ProjectsTable;
 use App\Models\Project;
+use Filament\Forms\Components\Repeater;
 use BackedEnum;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -80,6 +81,35 @@ class ProjectResource extends Resource
             Toggle::make('is_active')
                 ->label('Активен')
                 ->default(true),
+
+            Section::make('Галерея проекта')
+                ->schema([
+                    Repeater::make('images')
+                        ->relationship()
+                        ->schema([
+                            FileUpload::make('image')
+                                ->label('Изображение')
+                                ->image()
+                                ->disk('public')
+                                ->directory('projects/gallery')
+                                ->required(),
+
+                            TextInput::make('caption')
+                                ->label('Подпись'),
+
+                            TextInput::make('position')
+                                ->label('Позиция')
+                                ->numeric()
+                                ->default(0),
+                        ])
+                        ->collapsible()
+                        ->itemLabel(fn (array $state): ?string =>
+                            $state['caption'] ?? 'Изображение'
+                        )
+                        ->reorderable()
+                        ->columnSpanFull(),
+                ])
+                ->collapsed(),
 
 
             Section::make('SEO')

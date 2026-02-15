@@ -18,5 +18,4 @@
 
         @include('layouts.partials.steps')
         <!-- /section with 3 steps -->
-
 @endsection

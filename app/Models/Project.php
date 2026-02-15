@@ -18,6 +18,12 @@ class Project extends Model
         'is_active',
     ];
 
+    protected $casts = [
+        'created_at' => 'datetime',
+    ];
+
+    protected $with = ['images'];
+
     public function services()
     {
         return $this->belongsToMany(Service::class);
@@ -35,6 +41,11 @@ class Project extends Model
         return $this->detail_image
             ? asset('storage/' . $this->detail_image)
             : null;
+    }
+
+    public function images()
+    {
+        return $this->hasMany(ProjectImage::class)->orderBy('position');
     }
 }
 
