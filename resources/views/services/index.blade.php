@@ -167,7 +167,7 @@
                     <!-- 02 -->
                     <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
 
-        <span class="icon btn btn-circle btn-lg btn-primary !text-white !bg-[#3f78e0] border-[#3f78e0] pointer-events-none !mb-4 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
           <span class="number table-cell text-center align-middle text-[1.1rem] font-bold">
             02
           </span>

@@ -64,7 +64,6 @@
 
 
 
-
     {{-- ================= ОПИСАНИЕ ================= --}}
     @if($service->content)
         <section class="wrapper bg-white py-24">
@@ -82,7 +81,7 @@
         <section class="wrapper !bg-[#f8f9fa] py-24">
             <div class="container">
 
-                <h2 class="text-3xl font-bold text-center mb-16 text-[#343f52]">
+                <h2 class="text-3xl font-bold text-center !mb-16 text-[#343f52]">
                     Типовые решения
                 </h2>
 
@@ -114,7 +113,7 @@
         <section class="wrapper bg-white py-24">
             <div class="container">
 
-                <h2 class="text-3xl font-bold text-center mb-16 text-[#343f52]">
+                <h2 class="text-3xl font-bold text-center !mb-16 text-[#343f52]">
                     Технологии
                 </h2>
 
@@ -188,7 +187,7 @@
         <section id="projects" class="wrapper bg-white py-24">
             <div class="container">
 
-                <h2 class="text-3xl font-bold text-center mb-16 text-[#343f52]">
+                <h2 class="text-3xl font-bold text-center !mb-16 text-[#343f52]">
                     Реализованные проекты
                 </h2>
 
