@@ -32,7 +32,7 @@
             </div>
         </section>
 
-        @if($project->images?->isNotEmpty())
+        @if($project->detail_image || $project->images?->isNotEmpty())
             <section class="wrapper bg-white">
                 <div class="container pb-16">
                     <div class="max-w-5xl mx-auto"> {{-- <= ограничиваем ширину на больших экранах --}}
@@ -46,18 +46,6 @@
                             <div class="swiper">
                                 <div class="swiper-wrapper">
 
-                                    {{-- Сначала detail_image --}}
-                                    @if($project->detail_image)
-                                        <div class="swiper-slide">
-                                            <div class="relative overflow-hidden rounded-lg aspect-[16/9] bg-[#f3f4f6]">
-                                                <img src="{{ asset('storage/'.$project->detail_image) }}"
-                                                     class="absolute inset-0 w-full h-full object-cover"
-                                                     alt="{{ $project->title }}">
-                                            </div>
-                                        </div>
-                                    @endif
-
-                                    {{-- Затем галерея --}}
                                     @foreach($project->images as $image)
                                         <div class="swiper-slide">
                                             <div class="relative overflow-hidden rounded-lg aspect-[16/9] bg-[#f3f4f6]">
@@ -75,7 +63,6 @@
                                     @endforeach
 
                                 </div>
-
                             </div>
                         </div>
 
