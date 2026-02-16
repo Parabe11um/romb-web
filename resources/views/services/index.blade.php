@@ -22,6 +22,16 @@
         {{-- 3 ОСНОВНЫЕ УСЛУГИ --}}
         <section class="wrapper bg-white py-24">
             <div class="container">
+
+                @php
+                    $breadcrumbs = [
+                        ['title' => 'Главная', 'url' => route('home')],
+                        ['title' => 'Услуги']
+                    ];
+                @endphp
+
+                @include('layouts.partials.breadcrumbs')
+
                 <div class="grid md:grid-cols-3 gap-16 text-center">
 
                     @foreach($services as $service)

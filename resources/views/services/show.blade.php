@@ -63,11 +63,21 @@
     </section>
 
 
-
     {{-- ================= ОПИСАНИЕ ================= --}}
     @if($service->content)
         <section class="wrapper bg-white py-24">
             <div class="container max-w-5xl">
+
+                @php
+                    $breadcrumbs = [
+                        ['title' => 'Главная', 'url' => route('home')],
+                        ['title' => 'Услуги', 'url' => route('services.index')],
+                        ['title' => $service->title]
+                    ];
+                @endphp
+
+                @include('layouts.partials.breadcrumbs')
+
                 <div class="prose max-w-none text-[#343f52]">
                     {!! $service->content !!}
                 </div>

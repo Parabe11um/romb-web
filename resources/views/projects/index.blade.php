@@ -22,6 +22,16 @@
         <!-- /section -->
         <section class="wrapper !bg-[#ffffff]">
             <div class="container py-[4.5rem] xl:!py-24 lg:!py-24 md:!py-24">
+                @php
+                    $breadcrumbs = [
+                        ['title' => 'Главная', 'url' => route('home')],
+                        ['title' => 'Проекты']
+                    ];
+                @endphp
+
+                @include('layouts.partials.breadcrumbs')
+
+
                 <div class="itemgrid grid-view projects-masonry">
                     <div class="isotope-filter !relative !z-[5] filter !mb-10">
 
