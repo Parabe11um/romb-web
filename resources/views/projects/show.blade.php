@@ -8,31 +8,22 @@
         @include('layouts.partials.header')
 
         {{-- HERO / TITLE --}}
-        <section class="wrapper bg-white">
-            <div class="container pt-20 pb-12 text-center">
-                <div class="mx-auto max-w-3xl">
+        @php
+            $heroTitle = $project->title;
+            $heroSubtitle = $project->excerpt;
+            $heroLabel = $project->services->first()->title ?? 'Проект';
 
-                    @if($project->services->count())
-                        <div class="uppercase text-xs tracking-wide text-[#aab0bc] mb-2">
-                            {{ $project->services->first()->title }}
-                        </div>
-                    @endif
+            $breadcrumbs = [
+                ['title' => 'Главная', 'url' => route('home')],
+                ['title' => 'Проекты', 'url' => route('projects.index')],
+                ['title' => $project->title]
+            ];
+        @endphp
 
-                    <h1 class="text-4xl font-bold mb-4 text-[#343f52]">
-                        {{ $project->title }}
-                    </h1>
+        @include('layouts.partials.hero-unified')
 
-                    @if($project->excerpt)
-                        <p class="text-lg text-[#60697b]">
-                            {{ $project->excerpt }}
-                        </p>
-                    @endif
 
-                </div>
-            </div>
-        </section>
-
-        @if($project->detail_image || $project->images?->isNotEmpty())
+    @if($project->detail_image || $project->images?->isNotEmpty())
             <section class="wrapper bg-white">
                 <div class="container pb-16">
                     <div class="max-w-5xl mx-auto"> {{-- <= ограничиваем ширину на больших экранах --}}

@@ -1,6 +1,6 @@
 @if(isset($breadcrumbs) && count($breadcrumbs))
-    <nav class="text-sm text-[#aab0bc] mb-6" aria-label="Breadcrumb">
-        <ol class="flex flex-wrap items-center gap-2">
+    <nav class="text-sm text-[#aab0bc] mb-6 text-center" aria-label="Breadcrumb">
+        <ol class="flex flex-wrap justify-center items-center gap-2">
 
             @foreach($breadcrumbs as $breadcrumb)
 

@@ -5,37 +5,25 @@
     @include('layouts.partials.header')
 
     {{-- HERO / HEADER --}}
-    <section class="wrapper !bg-[#edf2fc]">
-        <div class="container pt-10 pb-36 text-center">
-            <div class="max-w-3xl mx-auto">
+    @php
+        $heroTitle = $article->title;
+        $heroSubtitle = null;
+        $heroLabel = 'Статья';
 
-                {{-- Категория (пока заглушка, потом можно заменить) --}}
-                <div class="inline-flex uppercase tracking-[0.02rem] text-[0.7rem] font-bold text-[#aab0bc] mb-2 relative pl-5
-                        before:absolute before:w-3 before:h-[2px] before:left-0 before:top-1/2 before:bg-[#3f78e0]">
-                    Статья
-                </div>
+        $breadcrumbs = [
+            ['title' => 'Главная', 'url' => route('home')],
+            ['title' => 'Статьи', 'url' => route('articles.index')],
+            ['title' => $article->title]
+        ];
+    @endphp
 
-                {{-- Заголовок --}}
-                <h1 class="text-[clamp(1.6rem,4vw,2.4rem)] font-bold leading-tight mb-4">
-                    {{ $article->title }}
-                </h1>
+    @include('layouts.partials.hero-unified')
 
-                {{-- Мета --}}
-                <ul class="text-[0.8rem] text-[#aab0bc] flex justify-center gap-4">
-                    <li>
-                        <i class="uil uil-calendar-alt mr-1"></i>
-                        {{ $article->created_at->format('d.m.Y') }}
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </section>
 
     {{-- CONTENT --}}
     <section class="wrapper bg-white">
         <div class="container pb-24">
-            <div class="max-w-4xl mx-auto -mt-28">
+            <div class="max-w-4xl mx-auto">
 
                 <article class="card overflow-hidden">
 

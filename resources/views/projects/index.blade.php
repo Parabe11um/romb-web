@@ -4,17 +4,29 @@
     <div class="grow shrink-0">
         @include('layouts.partials.header')
         <!-- /header -->
-        <section class="wrapper !bg-[#ffffff]">
-            <div class="container pt-10 xl:pt-[4.5rem] lg:pt-[4.5rem] md:pt-[4.5rem]">
-                <div class="flex flex-wrap mx-[-15px]">
-                    <div class="md:w-8/12 lg:w-7/12 xl:w-6/12 xxl:w-5/12 w-full px-[15px]">
-                        <h1 class="!text-[calc(1.365rem_+_1.38vw)] font-bold !leading-[1.2] xl:!text-[2.4rem] !mb-3">
-                            Проекты
-                        </h1>
-                        <p class="lead text-[1.05rem] !leading-[1.6]">
-                            Реализованные проекты, отражающие наш подход, дизайн и техническое качество.
-                        </p>
-                    </div>
+        {{-- HERO --}}
+        <section class="wrapper bg-[#edf2fc]">
+            <div class="container h-[320px] md:h-[380px] flex items-center justify-center text-center">
+                <div class="max-w-2xl mx-auto">
+
+                    <h1 class="text-4xl font-bold text-[#343f52] mb-6">
+                        Проекты
+                    </h1>
+
+                    <p class="text-[#60697b] text-lg leading-relaxed">
+                        Реализованные проекты, отражающие наш подход,
+                        дизайн и техническое качество.
+                    </p>
+
+                    @php
+                        $breadcrumbs = [
+                            ['title' => 'Главная', 'url' => route('home')],
+                            ['title' => 'Проекты']
+                        ];
+                    @endphp
+
+                    @include('layouts.partials.breadcrumbs')
+
                 </div>
             </div>
         </section>
@@ -22,16 +34,6 @@
         <!-- /section -->
         <section class="wrapper !bg-[#ffffff]">
             <div class="container py-[4.5rem] xl:!py-24 lg:!py-24 md:!py-24">
-                @php
-                    $breadcrumbs = [
-                        ['title' => 'Главная', 'url' => route('home')],
-                        ['title' => 'Проекты']
-                    ];
-                @endphp
-
-                @include('layouts.partials.breadcrumbs')
-
-
                 <div class="itemgrid grid-view projects-masonry">
                     <div class="isotope-filter !relative !z-[5] filter !mb-10">
 

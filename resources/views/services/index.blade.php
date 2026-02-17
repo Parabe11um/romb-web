@@ -4,17 +4,28 @@
     <div class="grow shrink-0">
         @include('layouts.partials.header')
 
-        {{-- HERO --}}
         <section class="wrapper bg-[#edf2fc]">
-            <div class="container py-24 text-center">
+            <div class="container h-[320px] md:h-[380px] flex items-center justify-center text-center">
                 <div class="max-w-2xl mx-auto">
+
                     <h1 class="text-4xl font-bold text-[#343f52] mb-6">
-                        Наши услуги
+                        Услуги
                     </h1>
+
                     <p class="text-[#60697b] text-lg leading-relaxed">
                         Полный цикл digital-работ: проектирование, запуск и развитие
                         цифровых решений для бизнеса.
                     </p>
+
+                    @php
+                        $breadcrumbs = [
+                            ['title' => 'Главная', 'url' => route('home')],
+                            ['title' => 'Услуги']
+                        ];
+                    @endphp
+
+                    @include('layouts.partials.breadcrumbs')
+
                 </div>
             </div>
         </section>
@@ -22,16 +33,6 @@
         {{-- 3 ОСНОВНЫЕ УСЛУГИ --}}
         <section class="wrapper bg-white py-24">
             <div class="container">
-
-                @php
-                    $breadcrumbs = [
-                        ['title' => 'Главная', 'url' => route('home')],
-                        ['title' => 'Услуги']
-                    ];
-                @endphp
-
-                @include('layouts.partials.breadcrumbs')
-
                 <div class="grid md:grid-cols-3 gap-16 text-center">
 
                     @foreach($services as $service)

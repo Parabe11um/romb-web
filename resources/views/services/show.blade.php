@@ -5,79 +5,39 @@
 
     {{-- ================= HERO ================= --}}
     @php
-        $hasHeroImage = !empty($service->hero_image);
+        $heroTitle = $service->hero_title ?: $service->title;
+        $heroSubtitle = $service->hero_subtitle ?: $service->excerpt;
+        $heroLabel = 'Услуга';
+
+        $breadcrumbs = [
+            ['title' => 'Главная', 'url' => route('home')],
+            ['title' => 'Услуги', 'url' => route('services.index')],
+            ['title' => $service->title]
+        ];
+
+        $heroButtons = '
+            <a href="#contact"
+               class="px-8 py-3 bg-[#5eb9f0] text-white rounded-full font-medium hover:shadow-lg transition">
+                Обсудить проект
+            </a>';
+
+        if($service->projects->count()) {
+            $heroButtons .= '
+                <a href="#projects"
+                   class="px-8 py-3 bg-[#5eb9f0] text-white rounded-full font-medium hover:shadow-lg transition">
+                    Посмотреть кейсы
+                </a>';
+        }
     @endphp
 
-    <section class="relative
-                min-h-[50vh] md:min-h-[75vh]
-                flex items-center justify-center
-                overflow-hidden">
+    @include('layouts.partials.hero-unified')
 
-        {{-- Фон --}}
-        @if($hasHeroImage)
-            <img
-                src="{{ asset('storage/' . $service->hero_image) }}"
-                alt="{{ $service->title }}"
-                class="absolute inset-0 w-full h-full object-cover">
-
-            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
-        @else
-            <div class="absolute inset-0 bg-[#edf2fc]"></div>
-        @endif
-
-        {{-- Контент --}}
-        <div class="relative container text-center z-10 px-4 max-w-4xl">
-
-            {{-- Заголовок --}}
-            <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-6
-            {{ $hasHeroImage ? '!text-white' : 'text-[#343f52]' }}">
-                {{ $service->hero_title ?: $service->title }}
-            </h1>
-
-            {{-- Подзаголовок --}}
-            @if($service->hero_subtitle || $service->excerpt)
-                <p class="text-lg md:text-xl mb-10 leading-relaxed
-                {{ $hasHeroImage ? 'text-white/85' : 'text-[#60697b]' }}">
-                    {{ $service->hero_subtitle ?: $service->excerpt }}
-                </p>
-            @endif
-
-            {{-- Кнопки --}}
-            <div class="flex justify-center gap-4 flex-wrap">
-
-                <a href="#contact"
-                   class="btn btn-lg btn-sky !text-white !bg-[#5eb9f0] border-[#5eb9f0] hover:text-white hover:!bg-[#5eb9f0] hover:!border-[#5eb9f0] focus:shadow-[rgba(88,167,216,1)] active:text-white active:!bg-[#5eb9f0] active:border-[#5eb9f0] disabled:text-white disabled:!bg-[#5eb9f0] disabled:border-[#5eb9f0]  !rounded-[50rem] !mr-2">
-                    Обсудить проект
-                </a>
-
-                @if($service->projects->count())
-                    <a href="#projects"
-                       class="btn btn-lg btn-sky !text-white !bg-[#5eb9f0] border-[#5eb9f0] hover:text-white hover:!bg-[#5eb9f0] hover:!border-[#5eb9f0] focus:shadow-[rgba(88,167,216,1)] active:text-white active:!bg-[#5eb9f0] active:border-[#5eb9f0] disabled:text-white disabled:!bg-[#5eb9f0] disabled:border-[#5eb9f0]  !rounded-[50rem] !mr-2">
-                        Посмотреть кейсы
-                    </a>
-                @endif
-
-            </div>
-
-        </div>
-    </section>
 
 
     {{-- ================= ОПИСАНИЕ ================= --}}
     @if($service->content)
         <section class="wrapper bg-white py-24">
             <div class="container max-w-5xl">
-
-                @php
-                    $breadcrumbs = [
-                        ['title' => 'Главная', 'url' => route('home')],
-                        ['title' => 'Услуги', 'url' => route('services.index')],
-                        ['title' => $service->title]
-                    ];
-                @endphp
-
-                @include('layouts.partials.breadcrumbs')
-
                 <div class="prose max-w-none text-[#343f52]">
                     {!! $service->content !!}
                 </div>
