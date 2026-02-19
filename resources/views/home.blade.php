@@ -1,9 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
-        @include('layouts.partials.header')
-        <!-- /header -->
-
         @include('layouts.partials.banner')
         <!-- /section with hero-block -->
 

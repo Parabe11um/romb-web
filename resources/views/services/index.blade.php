@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="grow shrink-0">
-        @include('layouts.partials.header')
 
         {{-- HERO --}}
         @include('layouts.partials.hero-unified', [
@@ -11,7 +10,8 @@
             'breadcrumbs' => [
                 ['title' => 'Главная', 'url' => route('home')],
                 ['title' => 'Услуги']
-            ]
+            ],
+            'withBackground' => true
         ])
 
         <section class="wrapper bg-white py-24">

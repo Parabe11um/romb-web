@@ -1,9 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- Header --}}
-    @include('layouts.partials.header')
-
     {{-- HERO / HEADER --}}
     @php
         $heroTitle = $article->title;

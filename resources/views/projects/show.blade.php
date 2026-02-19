@@ -3,10 +3,6 @@
 @section('content')
 
     <div class="grow shrink-0">
-
-        {{-- Header --}}
-        @include('layouts.partials.header')
-
         {{-- HERO / TITLE --}}
         @php
             $heroTitle = $project->title;
@@ -18,6 +14,23 @@
                 ['title' => 'Проекты', 'url' => route('projects.index')],
                 ['title' => $project->title]
             ];
+
+
+        $heroButtons = '
+            <a href="#contact"
+               class="px-8 py-3 bg-[#5eb9f0] text-white rounded-full font-medium hover:shadow-lg transition">
+                Обсудить проект
+            </a>';
+
+        if($service->projects->count()) {
+            $heroButtons .= '
+                <a href="#projects"
+                   class="px-8 py-3 bg-[#5eb9f0] text-white rounded-full font-medium hover:shadow-lg transition">
+                    Посмотреть кейсы
+                </a>';
+        }
+
+
         @endphp
 
         @include('layouts.partials.hero-unified')

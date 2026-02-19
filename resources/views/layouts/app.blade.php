@@ -53,6 +53,7 @@
         </style>
     </head>
     <body>
+        @include('layouts.partials.header')
         @yield('content')
         @include('layouts.partials.footer')
         <script src="{{ asset('js/plugins.js') }}"></script>

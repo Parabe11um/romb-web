@@ -2,7 +2,6 @@
 
 @section('content')
     <div class="grow shrink-0">
-        @include('layouts.partials.header')
         <!-- /header -->
 
         {{-- HERO --}}
@@ -12,7 +11,8 @@
             'breadcrumbs' => [
                 ['title' => 'Главная', 'url' => route('home')],
                 ['title' => 'Проекты']
-            ]
+        ],
+        'withBackground' => true
         ])
 
         <!-- /section -->

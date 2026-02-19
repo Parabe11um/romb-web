@@ -1,43 +1,61 @@
-<section class="wrapper bg-[#edf2fc]">
-    <div class="container
-                py-16 md:h-[360px]
-                md:flex md:items-center md:justify-center
-                text-center">
+@php
+    $heroImage = $heroImage ?? null;
+    $hasImage = !empty($heroImage);
+@endphp
+
+
+<section class="relative w-full min-h-[380px] md:min-h-[420px] flex items-center
+    {{ $hasImage ? '' : 'bg-[#edf2fc]' }}">
+
+    {{-- Background --}}
+    @if($hasImage)
+        <div class="absolute inset-0">
+            <img src="{{ asset('storage/' . $heroImage) }}"
+                 class="w-full h-full object-cover"
+                 alt="">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+    @else
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute -top-32 -left-32 w-[520px] h-[520px]
+                bg-[#3f78e0]/30 rounded-full blur-[120px]"></div>
+            <div class="absolute -bottom-32 -right-32 w-[520px] h-[520px]
+                bg-[#5eb9f0]/30 rounded-full blur-[120px]"></div>
+        </div>
+    @endif
+
+    {{-- Content --}}
+    <div class="relative container py-24 md:py-32 text-center">
 
         <div class="max-w-2xl mx-auto">
 
-            {{-- Label --}}
-            @isset($heroLabel)
-                <div class="uppercase tracking-[0.08em] text-xs text-[#aab0bc] mb-3">
-                    {{ $heroLabel }}
+            @if(!empty($breadcrumbs))
+                <div class="mb-6 text-sm
+                {{ $hasImage ? 'text-white/80' : 'text-[#60697b]' }}">
+                    @include('layouts.partials.breadcrumbs', [
+                        'breadcrumbs' => $breadcrumbs
+                    ])
                 </div>
-            @endisset
+            @endif
 
-            {{-- Title --}}
-            <h1 class="text-3xl md:text-4xl font-bold text-[#343f52] mb-4 leading-tight">
+
+            <h1 class="text-3xl md:text-4xl font-bold mb-4
+                {{ $hasImage ? 'text-white' : 'text-[#343f52]' }}">
                 {{ $heroTitle }}
             </h1>
 
-            {{-- Subtitle --}}
             @if(!empty($heroSubtitle))
-                <p class="text-[#60697b] text-base md:text-lg leading-relaxed mb-4">
+                <p class="text-base md:text-lg mb-6
+                    {{ $hasImage ? 'text-white/90' : 'text-[#60697b]' }}">
                     {{ $heroSubtitle }}
                 </p>
             @endif
 
-            {{-- Breadcrumbs --}}
-            @if(isset($breadcrumbs))
-                <div class="flex justify-center">
-                    @include('layouts.partials.breadcrumbs')
-                </div>
-            @endif
-
-            {{-- Buttons --}}
-            @isset($heroButtons)
-                <div class="flex justify-center gap-4 mt-6 flex-wrap">
-                    {!! $heroButtons !!}
-                </div>
-            @endisset
+                @isset($heroButtons)
+                    <div class="mt-6 flex justify-center gap-4 flex-wrap">
+                        {!! $heroButtons !!}
+                    </div>
+                @endisset
 
         </div>
     </div>

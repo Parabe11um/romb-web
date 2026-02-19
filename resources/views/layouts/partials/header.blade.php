@@ -1,5 +1,5 @@
 <header class="relative wrapper !bg-[#ffffff] ">
-    <nav class="navbar navbar-expand-lg classic transparent navbar-light">
+    <nav class="navbar navbar-expand-lg classic navbar-light bg-white">
         <div class="container flex items-center">
 
             <div class="navbar-brand">

@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    @include('layouts.partials.header')
 
     {{-- HERO --}}
     @include('layouts.partials.hero-unified', [
@@ -9,10 +8,11 @@
         'breadcrumbs' => [
             ['title' => 'Главная', 'url' => route('home')],
             ['title' => 'Статьи']
-        ]
+        ],
+        'withBackground' => true
     ])
 
-    <div class="wrapper bg-white">
+    <div class="wrapper bg-white py-24">
         <div class="container pb-20">
             <div class="flex flex-wrap items-stretch -mx-5">
                 @foreach($articles as $article)
