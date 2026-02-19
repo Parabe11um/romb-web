@@ -21,7 +21,7 @@
 
 
     {{-- CONTENT --}}
-    <section class="wrapper bg-white">
+    <section class="wrapper bg-white mt-10">
         <div class="container pb-24">
             <div class="max-w-4xl mx-auto">
 
@@ -29,7 +29,7 @@
 
                     {{-- Превью --}}
                     @if($article->preview_image)
-                        <figure class="h-[420px] overflow-hidden">
+                        <figure class="h-full overflow-hidden">
                             <img
                                 src="{{ asset('storage/' . $article->preview_image) }}"
                                 alt="{{ $article->title }}"

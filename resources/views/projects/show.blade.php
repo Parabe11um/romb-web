@@ -24,9 +24,9 @@
 
 
     @if($project->detail_image || $project->images?->isNotEmpty())
-            <section class="wrapper bg-white">
+            <section class="wrapper bg-white mt-10">
                 <div class="container pb-16">
-                    <div class="max-w-5xl mx-auto"> {{-- <= ограничиваем ширину на больших экранах --}}
+                    <div class="max-w-5xl mx-auto">
 
                         <div class="swiper-container relative dots-over"
                              data-dots="true"
@@ -63,7 +63,6 @@
             </section>
         @endif
 
-        {{-- CONTENT --}}
         <section class="wrapper bg-white py-20">
             <div class="container">
                 <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">

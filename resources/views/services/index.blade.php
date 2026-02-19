@@ -4,33 +4,16 @@
     <div class="grow shrink-0">
         @include('layouts.partials.header')
 
-        <section class="wrapper bg-[#edf2fc]">
-            <div class="container h-[320px] md:h-[380px] flex items-center justify-center text-center">
-                <div class="max-w-2xl mx-auto">
+        {{-- HERO --}}
+        @include('layouts.partials.hero-unified', [
+            'heroTitle' => 'Услуги',
+            'heroSubtitle' => 'Полный цикл digital-работ: проектирование, запуск и развитие цифровых решений для бизнеса.',
+            'breadcrumbs' => [
+                ['title' => 'Главная', 'url' => route('home')],
+                ['title' => 'Услуги']
+            ]
+        ])
 
-                    <h1 class="text-4xl font-bold text-[#343f52] mb-6">
-                        Услуги
-                    </h1>
-
-                    <p class="text-[#60697b] text-lg leading-relaxed">
-                        Полный цикл digital-работ: проектирование, запуск и развитие
-                        цифровых решений для бизнеса.
-                    </p>
-
-                    @php
-                        $breadcrumbs = [
-                            ['title' => 'Главная', 'url' => route('home')],
-                            ['title' => 'Услуги']
-                        ];
-                    @endphp
-
-                    @include('layouts.partials.breadcrumbs')
-
-                </div>
-            </div>
-        </section>
-
-        {{-- 3 ОСНОВНЫЕ УСЛУГИ --}}
         <section class="wrapper bg-white py-24">
             <div class="container">
                 <div class="grid md:grid-cols-3 gap-16 text-center">

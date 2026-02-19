@@ -4,32 +4,16 @@
     <div class="grow shrink-0">
         @include('layouts.partials.header')
         <!-- /header -->
+
         {{-- HERO --}}
-        <section class="wrapper bg-[#edf2fc]">
-            <div class="container h-[320px] md:h-[380px] flex items-center justify-center text-center">
-                <div class="max-w-2xl mx-auto">
-
-                    <h1 class="text-4xl font-bold text-[#343f52] mb-6">
-                        Проекты
-                    </h1>
-
-                    <p class="text-[#60697b] text-lg leading-relaxed">
-                        Реализованные проекты, отражающие наш подход,
-                        дизайн и техническое качество.
-                    </p>
-
-                    @php
-                        $breadcrumbs = [
-                            ['title' => 'Главная', 'url' => route('home')],
-                            ['title' => 'Проекты']
-                        ];
-                    @endphp
-
-                    @include('layouts.partials.breadcrumbs')
-
-                </div>
-            </div>
-        </section>
+        @include('layouts.partials.hero-unified', [
+            'heroTitle' => 'Проекты',
+            'heroSubtitle' => 'Реализованные проекты, отражающие наш подход, дизайн и техническое качество.',
+            'breadcrumbs' => [
+                ['title' => 'Главная', 'url' => route('home')],
+                ['title' => 'Проекты']
+            ]
+        ])
 
         <!-- /section -->
         <section class="wrapper !bg-[#ffffff]">

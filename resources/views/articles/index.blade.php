@@ -3,77 +3,134 @@
     @include('layouts.partials.header')
 
     {{-- HERO --}}
-    <section class="wrapper bg-[#edf2fc]">
-        <div class="container h-[320px] md:h-[380px] flex items-center justify-center text-center">
-            <div class="max-w-2xl mx-auto">
+    @include('layouts.partials.hero-unified', [
+        'heroTitle' => 'Статьи',
+        'heroSubtitle' => 'Аналитика, кейсы и рабочие подходы в разработке и цифровых продуктах. Экспертные мнения.',
+        'breadcrumbs' => [
+            ['title' => 'Главная', 'url' => route('home')],
+            ['title' => 'Статьи']
+        ]
+    ])
 
-                <h1 class="text-4xl font-bold text-[#343f52] mb-6">
-                    Статьи
-                </h1>
+    <div class="wrapper bg-white">
+        <div class="container pb-20">
+            <div class="flex flex-wrap items-stretch -mx-5">
+                @foreach($articles as $article)
+                    <article
+                        class="item post xl:w-4/12 lg:w-4/12 md:w-4/12 w-full flex-[0_0_auto]
+               xl:!px-[20px] lg:!px-[20px] md:!px-[20px]
+               !mt-[40px] !px-[15px] max-w-full">
 
-                <p class="text-[#60697b] text-lg leading-relaxed">
-                    Аналитика, кейсы и рабочие подходы
-                    в разработке и цифровых продуктах. Экспертные мнения.
-                </p>
+                        <div class="card h-full flex flex-col">
 
-                @php
-                    $breadcrumbs = [
-                        ['title' => 'Главная', 'url' => route('home')],
-                        ['title' => 'Статьи']
-                    ];
-                @endphp
-
-                @include('layouts.partials.breadcrumbs')
-
-            </div>
-        </div>
-    </section>
-
-
-    <div class="wrapper !bg-[#ffffff]">
-        <div class="container !pb-[4.5rem] xl:!pb-24 lg:!pb-24 md:!pb-24">
-            <div class="flex flex-wrap mx-[-15px]">
-                <div class="xl:w-10/12 lg:w-10/12 w-full flex-[0_0_auto] !px-[15px] max-w-full !mx-auto">
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-                        @foreach ($articles as $article)
-                            <article class="group bg-white rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden">
-
-                                <a href="{{ route('articles.show', $article->slug) }}"
-                                   class="block relative aspect-[16/9] overflow-hidden bg-gray-100">
-
+                            {{-- IMAGE --}}
+                            <figure class="card-img-top overlay overlay-1 hover-scale group
+                   h-[400px] overflow-hidden rounded-t-lg">
+                                <a href="{{ route('articles.show', $article->slug) }}">
                                     <img
-                                        class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
-                                        src="{{ $article->cover_image
-                    ? asset('storage/' . $article->cover_image)
-                    : asset('storage/' . $article->preview_image) }}"
+                                        src="{{ asset('storage/' . $article->preview_image) }}"
                                         alt="{{ $article->title }}"
+                                        class="w-full h-full object-cover
+                       !transition-all !duration-[0.35s] !ease-in-out
+                       group-hover:scale-105"
                                     >
+                                    <span class="bg"></span>
                                 </a>
 
-                                <div class="p-5">
+                                <figcaption class="group-hover:opacity-100 absolute inset-0
+                           opacity-0 text-center z-[5] pointer-events-none">
+                                    <h5 class="from-top absolute w-full top-1/2 -translate-y-1/2">
+                                        Читать
+                                    </h5>
+                                </figcaption>
+                            </figure>
 
-                                    <div class="text-xs text-[#aab0bc] mb-2">
-                                        {{ $article->created_at->format('d.m.Y') }}
+
+                            {{-- BODY --}}
+                            <div class="card-body flex-1
+                        p-[40px]
+                        xl:!p-[1.75rem_1.75rem_1rem_1.75rem]
+                        lg:!p-[1.75rem_1.75rem_1rem_1.75rem]
+                        md:!p-[1.75rem_1.75rem_1rem_1.75rem]
+                        max-md:pb-4">
+
+                                <div class="post-header !mb-[.9rem]">
+
+                                    {{-- CATEGORY (пока статично, можно заменить позже) --}}
+                                    <div
+                                        class="inline-flex !mb-[.4rem] uppercase !tracking-[0.02rem]
+                               text-[0.7rem] font-bold !text-[#aab0bc]
+                               relative align-top !pl-[1.4rem]
+                               before:content-['']
+                               before:absolute
+                               before:inline-block
+                               before:translate-y-[-60%]
+                               before:w-3 before:h-[0.05rem]
+                               before:left-0 before:top-2/4
+                               before:bg-[#3f78e0]">
+                                        Статья
                                     </div>
 
-                                    <h3 class="text-lg font-semibold text-[#343f52] mb-3 leading-snug">
-                                        <a href="{{ route('articles.show', $article->slug) }}"
-                                           class="hover:text-[#3f78e0] transition">
-                                            {{ $article->title }}
+                                    {{-- TITLE --}}
+                                    <h2 class="post-title h3 !mt-1 !mb-3">
+                                        <a
+                                            class="!text-[#343f52] hover:!text-[#3f78e0]"
+                                            href="{{ route('articles.show', $article->slug) }}">
+                                            {{ \Illuminate\Support\Str::limit($article->title, 40) }}
                                         </a>
-                                    </h3>
-
-                                    <p class="text-sm text-[#60697b] leading-relaxed">
-                                        {{ $article->excerpt
-                                            ?? \Illuminate\Support\Str::limit(strip_tags($article->content), 120) }}
-                                    </p>
-
+                                    </h2>
                                 </div>
-                            </article>
-                        @endforeach
-                    </div>
-                </div>
+
+                                {{-- EXCERPT --}}
+                                <div class="!relative">
+                                    <p>
+                                        {{ \Illuminate\Support\Str::limit(strip_tags($article->excerpt), 80) }}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {{-- FOOTER --}}
+                            <div class="card-footer mt-auto
+                       xl:!p-[1.25rem_1.75rem_1.25rem]
+                       lg:!p-[1.25rem_1.75rem_1.25rem]
+                       md:!p-[1.25rem_1.75rem_1.25rem]
+                       p-[18px_40px]">
+
+                                <ul class="!text-[0.7rem] !text-[#aab0bc] m-0 p-0 list-none flex !mb-0">
+
+                                    {{-- DATE --}}
+                                    <li class="post-date inline-block">
+                                        <i class="uil uil-calendar-alt pr-[0.2rem] align-[-.05rem]"></i>
+                                        <span>{{ $article->created_at->format('d M Y') }}</span>
+                                    </li>
+
+                                    {{-- READ --}}
+                                    <li
+                                        class="post-comments inline-block
+                               before:content-['']
+                               before:inline-block
+                               before:w-[0.2rem]
+                               before:h-[0.2rem]
+                               before:opacity-50
+                               before:m-[0_.6rem_0]
+                               before:rounded-[100%]
+                               before:align-[.15rem]
+                               before:bg-[#aab0bc]">
+                                        <a
+                                            class="!text-[#aab0bc] hover:!text-[#3f78e0]"
+                                            href="{{ route('articles.show', $article->slug) }}">
+                                            Читать →
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </div>
     </div>
+
 @endsection
