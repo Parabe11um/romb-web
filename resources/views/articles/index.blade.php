@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-    {{-- HERO --}}
     @include('layouts.partials.hero-unified', [
         'heroTitle' => 'Статьи',
         'heroSubtitle' => 'Аналитика, кейсы и рабочие подходы в разработке и цифровых продуктах. Экспертные мнения.',
@@ -23,7 +22,6 @@
 
                         <div class="card h-full flex flex-col">
 
-                            {{-- IMAGE --}}
                             <figure class="card-img-top overlay overlay-1 hover-scale group
                    h-[400px] overflow-hidden rounded-t-lg">
                                 <a href="{{ route('articles.show', $article->slug) }}">
@@ -45,8 +43,6 @@
                                 </figcaption>
                             </figure>
 
-
-                            {{-- BODY --}}
                             <div class="card-body flex-1
                         p-[40px]
                         xl:!p-[1.75rem_1.75rem_1rem_1.75rem]
@@ -56,7 +52,6 @@
 
                                 <div class="post-header !mb-[.9rem]">
 
-                                    {{-- CATEGORY (пока статично, можно заменить позже) --}}
                                     <div
                                         class="inline-flex !mb-[.4rem] uppercase !tracking-[0.02rem]
                                text-[0.7rem] font-bold !text-[#aab0bc]
@@ -71,7 +66,6 @@
                                         Статья
                                     </div>
 
-                                    {{-- TITLE --}}
                                     <h2 class="post-title h3 !mt-1 !mb-3">
                                         <a
                                             class="!text-[#343f52] hover:!text-[#3f78e0]"
@@ -81,7 +75,6 @@
                                     </h2>
                                 </div>
 
-                                {{-- EXCERPT --}}
                                 <div class="!relative">
                                     <p>
                                         {{ \Illuminate\Support\Str::limit(strip_tags($article->excerpt), 80) }}
@@ -89,7 +82,6 @@
                                 </div>
                             </div>
 
-                            {{-- FOOTER --}}
                             <div class="card-footer mt-auto
                        xl:!p-[1.25rem_1.75rem_1.25rem]
                        lg:!p-[1.25rem_1.75rem_1.25rem]
@@ -98,13 +90,11 @@
 
                                 <ul class="!text-[0.7rem] !text-[#aab0bc] m-0 p-0 list-none flex !mb-0">
 
-                                    {{-- DATE --}}
                                     <li class="post-date inline-block">
                                         <i class="uil uil-calendar-alt pr-[0.2rem] align-[-.05rem]"></i>
                                         <span>{{ $article->created_at->format('d M Y') }}</span>
                                     </li>
 
-                                    {{-- READ --}}
                                     <li
                                         class="post-comments inline-block
                                before:content-['']

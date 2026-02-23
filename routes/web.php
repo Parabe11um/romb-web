@@ -17,3 +17,6 @@ Route::get('/projects/{slug}', [ProjectController::class, 'show'])->name('projec
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
 Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
+
+Route::view('/about', 'about')->name('about');
+Route::view('/contacts', 'contacts')->name('contacts');

@@ -27,7 +27,7 @@
 
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link font-bold" href="#">О нас</a>
+                            <a class="nav-link font-bold" href="{{ route('about') }}">О нас</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link font-bold" href="{{ route('services.index') }}">Услуги</a>
@@ -39,7 +39,7 @@
                             <a class="nav-link font-bold" href="{{ route('articles.index') }}">Статьи</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link font-bold" href="#">Контакты</a>
+                            <a class="nav-link font-bold" href="{{ route('contacts') }}">Контакты</a>
                         </li>
                     </ul>
 

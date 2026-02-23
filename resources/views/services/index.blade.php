@@ -49,7 +49,7 @@
         </section>
 
         {{-- БЛОК ЦЕННОСТИ --}}
-        <section class="wrapper bg-white py-24">
+        <section class="wrapper !bg-[#f8f9fa] py-24">
             <div class="container">
 
                 <div class="text-center mb-16">
@@ -208,19 +208,6 @@
         </section>
 
         {{-- CTA --}}
-        <section class="wrapper bg-[#3f78e0] py-24 text-center text-white">
-            <div class="container max-w-2xl mx-auto">
-                <h2 class="text-3xl font-bold mb-6">
-                    Обсудим ваш проект?
-                </h2>
-                <p class="mb-8 opacity-90">
-                    Подготовим предложение с понятной структурой и этапами работ.
-                </p>
-                <a href="#"
-                   class="inline-block px-8 py-4 bg-white text-[#3f78e0] rounded-full font-semibold hover:shadow-lg transition">
-                    Связаться с нами
-                </a>
-            </div>
-        </section>
+        @include('layouts.partials.cta-unified')
     </div>
 @endsection
