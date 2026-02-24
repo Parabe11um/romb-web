@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
@@ -20,3 +21,4 @@ Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articl
 
 Route::view('/about', 'about')->name('about');
 Route::view('/contacts', 'contacts')->name('contacts');
+Route::post('/contacts', [ContactController::class, 'send'])->name('contact.send');
