@@ -1,0 +1,37 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-BAP0-7iE.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/fonts/Custom.woff": {
+    "file": "assets/Custom-DKOUhDFN.woff",
+    "src": "resources/fonts/Custom.woff"
+  },
+  "resources/fonts/Custom.woff2": {
+    "file": "assets/Custom-C6Ahks36.woff2",
+    "src": "resources/fonts/Custom.woff2"
+  },
+  "resources/fonts/Manrope/Manrope-VariableFont_wght.ttf": {
+    "file": "assets/Manrope-VariableFont_wght-0N3pECc_.ttf",
+    "src": "resources/fonts/Manrope/Manrope-VariableFont_wght.ttf"
+  },
+  "resources/fonts/Unicons.woff": {
+    "file": "assets/Unicons-BhE4mAtn.woff",
+    "src": "resources/fonts/Unicons.woff"
+  },
+  "resources/fonts/Unicons.woff2": {
+    "file": "assets/Unicons-LAGzIYyZ.woff2",
+    "src": "resources/fonts/Unicons.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DyY3nx4E.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
