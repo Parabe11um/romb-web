@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
 
-        {{-- Title --}}
-        <title>@yield('title', config('app.name'))</title>
+    {{-- Title --}}
+    <title>@yield('title', config('app.name'))</title>
 
-        {{-- Description --}}
-        <meta name="description"
-              content="@yield('meta_description', 'Создаём, развиваем и поддерживаем digital-проекты под задачи бизнеса.')">
+    {{-- Description --}}
+    <meta name="description"
+          content="@yield('meta_description', 'Создаём, развиваем и поддерживаем digital-проекты под задачи бизнеса.')">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        {{-- Open Graph --}}
-        <meta property="og:title" content="@yield('title', config('app.name'))">
-        <meta property="og:description" content="@yield('meta_description', '')">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="{{ url()->current() }}">
+    {{-- Open Graph --}}
+    <meta property="og:title" content="@yield('title', config('app.name'))">
+    <meta property="og:description" content="@yield('meta_description', '')">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
 
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
         <style>
 
             .logo { font-weight: 600; }
