@@ -1,2 +1,12 @@
 User-agent: *
-Disallow:
+Disallow: /admin
+Disallow: /login
+Disallow: /register
+Disallow: /dashboard
+Disallow: /storage/
+Disallow: /vendor/
+Disallow: /node_modules/
+
+Allow: /
+
+Sitemap: https://romb-web.ru/sitemap.xml
