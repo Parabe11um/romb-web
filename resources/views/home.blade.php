@@ -1,17 +1,30 @@
 @extends('layouts.app')
+
+@include('layouts.partials.seo', [
+    'title' => 'Romb Web — разработка сайтов и digital-решений',
+    'description' => 'Разработка корпоративных сайтов, интернет-магазинов и веб-приложений. Дизайн, программирование, поддержка и SEO. Работаем прозрачно и по этапам.'
+])
+
+
 @section('content')
+
+    <div data-reveal="fade">
         @include('layouts.partials.banner')
-        <!-- /section with hero-block -->
+    </div>
 
+    <div data-reveal>
         @include('layouts.partials.services', ['services' => $services])
-        <!-- /section service cards-->
+    </div>
 
+    <div data-reveal>
         @include('layouts.partials.projects', ['projects' => $projects])
-        <!-- /section project cards-->
+    </div>
 
+    <div data-reveal>
         @include('layouts.partials.articles', ['articles' => $articles])
-        <!-- /section article cards-->
+    </div>
 
+    <div data-reveal>
         @include('layouts.partials.steps')
-        <!-- /section with 3 steps -->
+    </div>
 @endsection

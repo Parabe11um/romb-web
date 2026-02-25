@@ -18,7 +18,7 @@
                         class="xl:!hidden lg:!hidden md:!hidden"><span class="rotator-fade !text-[#5eb9f0]">дизайном, разработкой, техподдержкой, продвижением, сайтов</span>
                 </h1>
                 <p class="lead !text-[1.1rem] !leading-[1.55] font-medium !mb-7">Помогаем сайтам становиться заметными, полезными и востребованными</p>
-                <span><a
+                <span><a href="{{ route('about') }}"
                         class="btn btn-lg btn-sky !text-white !bg-[#5eb9f0] border-[#5eb9f0] hover:text-white hover:!bg-[#5eb9f0] hover:!border-[#5eb9f0] focus:shadow-[rgba(88,167,216,1)] active:text-white active:!bg-[#5eb9f0] active:border-[#5eb9f0] disabled:text-white disabled:!bg-[#5eb9f0] disabled:border-[#5eb9f0]  !rounded-[50rem] !mr-2">Подробнее</a></span>
                 </div>
             <!-- /column -->

@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@include('layouts.partials.seo', [
+    'title' => 'Контакты — обсудить проект | Romb Web',
+    'description' => 'Свяжитесь с нами, чтобы обсудить разработку сайта или развитие проекта. Отвечаем оперативно и предлагаем понятный план действий.'
+])
+
 @section('content')
 
 @include('layouts.partials.hero-unified', [

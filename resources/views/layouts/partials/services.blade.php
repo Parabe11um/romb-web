@@ -1,9 +1,9 @@
-<section class="wrapper bg-gradient-sky py-24">
+<section class="wrapper bg-gradient-sky pb-24">
     <div class="container">
         <div class="grid md:grid-cols-3 gap-16 text-center">
 
-            @foreach($services as $service)
-                <div class="group">
+            @foreach($services as $i => $service)
+                <div class="group" data-reveal data-delay="{{ $i * 80 }}">
 
                     @if($service->image)
                         <figure class="mb-8">

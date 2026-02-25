@@ -19,9 +19,11 @@
         <div
             class="flex flex-wrap mx-[-15px] xl:mx-[-20px] lg:mx-[-20px] !mt-[-50px]">
 
-            @forelse($projects as $project)
+            @forelse($projects as $i => $project)
                 <div
-                    class="xl:w-4/12 lg:w-4/12 md:w-6/12 w-full flex-[0_0_auto] xl:!px-[20px] lg:!px-[20px] !px-[15px] !mt-[50px] max-w-full">
+                    class="xl:w-4/12 lg:w-4/12 md:w-6/12 w-full flex-[0_0_auto] xl:!px-[20px] lg:!px-[20px] !px-[15px] !mt-[50px] max-w-full"
+                    data-reveal
+                    data-delay="{{ $i * 90 }}">
 
                     <div class="project item">
                         @if($project->preview_image)

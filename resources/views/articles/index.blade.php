@@ -1,4 +1,10 @@
 @extends('layouts.app')
+
+@include('layouts.partials.seo', [
+    'title' => 'Статьи о разработке и digital | Romb Web',
+    'description' => 'Практичные статьи о разработке сайтов, дизайне, SEO и поддержке проектов. Делимся опытом, подходами и рабочими решениями.'
+])
+
 @section('content')
 
     @include('layouts.partials.hero-unified', [

@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@include('layouts.partials.seo', [
+    'title' => 'Проекты — реализованные кейсы | Romb Web',
+    'description' => 'Примеры реализованных проектов: корпоративные сайты, сервисы и интернет-магазины. Подход, задачи и результаты — без лишнего, по делу.'
+])
+
 @section('content')
     <div class="grow shrink-0">
         <!-- /header -->

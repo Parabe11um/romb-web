@@ -15,11 +15,13 @@
         </div>
 
         <div class="flex flex-wrap items-stretch -mx-5">
-            @foreach($articles as $article)
+            @foreach($articles as $i => $article)
                 <article
                     class="item post xl:w-4/12 lg:w-4/12 md:w-4/12 w-full flex-[0_0_auto]
                xl:!px-[20px] lg:!px-[20px] md:!px-[20px]
-               !mt-[40px] !px-[15px] max-w-full">
+               !mt-[40px] !px-[15px] max-w-full"
+                    data-reveal
+                    data-delay="{{ $i * 90 }}">
 
                     <div class="card h-full flex flex-col">
 

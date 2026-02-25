@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@include('layouts.partials.seo', [
+    'title' => $project->meta_title ? $project->meta_title . '— проект | Romb Web': $project->title . ' — проект | Romb Web',
+    'description' => $project->meta_description
+        ?: \Illuminate\Support\Str::limit(strip_tags($project->excerpt ?? $project->content), 160)
+])
+
 @section('content')
 
     <div class="grow shrink-0">

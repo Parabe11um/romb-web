@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@include('layouts.partials.seo', [
+    'title' => $article->meta_title ? $article->meta_title . '— статья | Romb Web': $article->title . ' — статья | Romb Web',
+    'description' => $article->meta_description
+        ?: \Illuminate\Support\Str::limit(strip_tags($article->excerpt ?? $article->content), 160)
+])
+
 @section('content')
     @php
         $heroTitle = $article->title;

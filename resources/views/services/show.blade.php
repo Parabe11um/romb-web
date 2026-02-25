@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@include('layouts.partials.seo', [
+    'title' => $service->meta_title ? $service->meta_title. ' — услуга | Romb Web' : $service->title . ' — услуга | Romb Web',
+    'description' => $service->meta_description
+        ?: \Illuminate\Support\Str::limit(strip_tags($service->excerpt ?? $service->content), 160)
+])
+
 @php
     $hasHeroImage = !empty($service->hero_image);
 @endphp

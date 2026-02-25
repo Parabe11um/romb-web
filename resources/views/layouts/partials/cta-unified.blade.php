@@ -21,7 +21,7 @@
             </p>
 
             <div class="flex justify-center">
-                <a href="#contact"
+                <a href="{{ route('contacts') }}"
                    class="px-8 py-3 bg-[#5eb9f0] text-white rounded-full font-medium hover:shadow-lg transition">
                     Связаться с нами
                 </a>
