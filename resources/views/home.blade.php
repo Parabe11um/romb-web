@@ -1,10 +1,5 @@
 @extends('layouts.app')
 
-@include('layouts.partials.seo', [
-    'title' => 'Romb Web — разработка сайтов и digital-решений',
-    'description' => 'Разработка корпоративных сайтов, интернет-магазинов и веб-приложений. Дизайн, программирование, поддержка и SEO. Работаем прозрачно и по этапам.'
-])
-
 
 @section('content')
 
