@@ -68,10 +68,8 @@
 
                 <div class="grid md:grid-cols-3 gap-16 text-center">
 
-                    <!-- Стратегия -->
                     <div class="group">
                         <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-[#edf2fc] flex items-center justify-center transition duration-300 group-hover:bg-[#3f78e0]">
-                            <!-- Иконка -->
                             <svg class="w-7 h-7 text-[#3f78e0] group-hover:text-white transition duration-300"
                                  fill="none" stroke="currentColor" stroke-width="1.8"
                                  viewBox="0 0 24 24">
@@ -89,7 +87,6 @@
                         </p>
                     </div>
 
-                    <!-- Системность -->
                     <div class="group">
                         <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-[#edf2fc] flex items-center justify-center transition duration-300 group-hover:bg-[#3f78e0]">
                             <svg class="w-7 h-7 text-[#3f78e0] group-hover:text-white transition duration-300"
@@ -109,7 +106,6 @@
                         </p>
                     </div>
 
-                    <!-- Прозрачность -->
                     <div class="group">
                         <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-[#edf2fc] flex items-center justify-center transition duration-300 group-hover:bg-[#3f78e0]">
                             <svg class="w-7 h-7 text-[#3f78e0] group-hover:text-white transition duration-300"
@@ -148,60 +144,40 @@
 
                 <div class="flex flex-wrap !justify-center mx-0 lg:mx-[-20px] xl:mx-[-35px] !mt-[-30px] process-wrapper line">
 
-                    <!-- 01 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
-
-        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative">
-          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-            01
-          </span>
-        </span>
-
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden text-center md:text-left">
+                        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto md:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+                            01
+                        </span>
                         <h4 class="!mb-2">Анализ</h4>
                         <p class="!mb-0 text-[#60697b]">
                             Погружаемся в бизнес, изучаем аудиторию и конкурентную среду.
                         </p>
                     </div>
 
-                    <!-- 02 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
-
-        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative">
-          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-            02
-          </span>
-        </span>
-
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden text-center md:text-left">
+                        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto md:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+                            02
+                        </span>
                         <h4 class="!mb-2">Проектирование</h4>
                         <p class="!mb-0 text-[#60697b]">
                             Формируем архитектуру, структуру и пользовательскую логику проекта.
                         </p>
                     </div>
 
-                    <!-- 03 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
-
-        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative">
-          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-            03
-          </span>
-        </span>
-
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden text-center md:text-left">
+                        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto md:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+                            03
+                        </span>
                         <h4 class="!mb-2">Реализация</h4>
                         <p class="!mb-0 text-[#60697b]">
                             Разрабатываем, тестируем и запускаем решение.
                         </p>
                     </div>
 
-                    <!-- 04 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative">
-
-        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative">
-          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-            04
-          </span>
-        </span>
-
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative text-center md:text-left">
+                        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto md:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+                            04
+                        </span>
                         <h4 class="!mb-2">Развитие</h4>
                         <p class="!mb-0 text-[#60697b]">
                             Поддерживаем, оптимизируем и масштабируем проект.
