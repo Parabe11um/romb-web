@@ -4,7 +4,7 @@
 @endphp
 
 
-<section class="relative w-full min-h-[380px] md:min-h-[420px] flex items-center
+<section class="relative w-full min-h-[380px] md:min-h-[420px] flex items-center overflow-hidden
     {{ $hasImage ? '' : 'bg-[#edf2fc]' }}">
 
     {{-- Background --}}
