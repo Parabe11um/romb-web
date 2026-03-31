@@ -1,4 +1,4 @@
-<header class="relative wrapper !bg-[#ffffff] overflow-hidden">
+<header class="relative wrapper !bg-[#ffffff] ">
     <nav class="navbar navbar-expand-lg classic navbar-light bg-white">
         <div class="container flex items-center">
 
@@ -14,7 +14,7 @@
                 </button>
             </div>
 
-            <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start max-w-full">
+            <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
 
                 <div class="offcanvas-header xl:hidden lg:hidden flex justify-between p-6">
                     <h3 class="text-white text-lg mb-0">romb web</h3>
