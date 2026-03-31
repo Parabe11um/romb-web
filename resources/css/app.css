@@ -4,6 +4,18 @@
 @import './style.css';
 @import './sky.css';
 
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
@@ -72,8 +84,9 @@ input[type="checkbox"] {
 
 .contact-policy__text{
     display: inline !important;
-    white-space: nowrap !important; /* чтобы не падало вниз */
+    white-space: normal !important;
     color: #60697b !important;
+    overflow-wrap: anywhere;
 }
 
 

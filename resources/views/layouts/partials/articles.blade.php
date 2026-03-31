@@ -3,7 +3,7 @@
 
         <div class="flex flex-wrap mx-[-15px] !text-center">
             <div
-                class="md:w-10/12 xl:w-8/12 lg:w-8/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!ml-[16.66666667%] lg:!ml-[16.66666667%] md:!ml-[8.33333333%]">
+                class="md:w-10/12 xl:w-8/12 lg:w-8/12 w-full flex-[0_0_auto]  max-w-full xl:!ml-[16.66666667%] lg:!ml-[16.66666667%] md:!ml-[8.33333333%]">
                 <h2 class="!text-[0.8rem] uppercase !text-[#5eb9f0] !mb-3 !leading-[1.35] !tracking-[0.02rem]">
                     Статьи
                 </h2>
@@ -19,7 +19,7 @@
                 <article
                     class="item post xl:w-4/12 lg:w-4/12 md:w-4/12 w-full flex-[0_0_auto]
                xl:!px-[20px] lg:!px-[20px] md:!px-[20px]
-               !mt-[40px] !px-[15px] max-w-full"
+               !mt-[40px]  max-w-full"
                     data-reveal
                     data-delay="{{ $i * 90 }}">
 
