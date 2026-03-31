@@ -5,7 +5,7 @@
             class="flex flex-wrap mx-[-15px] xl:mx-[-35px] lg:mx-[-20px] !mt-[-50px] xl:!mt-0 !mb-[4.5rem] items-center">
             <div
                 class="xl:w-7/12 lg:w-7/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[50px] xl:!mt-0 max-w-full xl:!order-2 lg:!order-2">
-                <figure class="m-0 p-0"><img class="img-auto" src="{{asset('images/main_hero.png')}}" srcset="{{asset('images/main_hero.png 2x')}}"
+                <figure class="m-0 p-0"><img class="img-auto" src="{{asset('images/main_hero_2.png')}}" srcset="{{asset('images/main_hero_2.png 2x')}}"
                                              alt="image"></figure>
 
 
@@ -14,8 +14,9 @@
             <div
                 class="md:w-10/12 md:!ml-[8.33333333%] lg:!ml-0 lg:w-5/12 xl:!ml-0 xl:w-5/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[50px] xl:!mt-0 max-w-full text-center lg:text-left xl:text-left">
                 <h1 class="xl:!text-[2.7rem] !text-[calc(0.395rem_+_1.74vw)] !leading-[1.15] !mb-5 md:mx-[-1.25rem] lg:mx-0 !mt-7">
-                    > 10 лет<br class="xl:!hidden lg:!hidden md:!hidden"> занимаемся <br
-                        class="xl:!hidden lg:!hidden md:!hidden"><span class="rotator-fade !text-[#5eb9f0]">дизайном, разработкой, техподдержкой, продвижением, сайтов</span>
+                    > 10 лет<br class="xl:!hidden lg:!hidden md:!hidden"> реализуем <br
+                        class="xl:!hidden lg:!hidden md:!hidden"><span class="rotator-fade !text-[#5eb9f0]">комплексную разработку, дизайн и проектирование, эффективное продвижение, техническое сопровождение</span>
+                    <br> сайтов
                 </h1>
                 <p class="lead !text-[1.1rem] !leading-[1.55] font-medium !mb-7">Помогаем сайтам становиться заметными, полезными и востребованными</p>
                 <span><a href="{{ route('about') }}"
