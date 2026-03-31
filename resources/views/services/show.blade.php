@@ -12,6 +12,7 @@
 
 
 @section('content')
+    <div class="grow shrink-0">
 
     {{-- ================= HERO ================= --}}
     @php
@@ -206,5 +207,5 @@
             </div>
         </section>
     @endif
-
+    </div>
 @endsection
