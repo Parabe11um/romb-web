@@ -1,6 +1,6 @@
 <section class="wrapper !bg-[#ffffff] py-20" data-reveal="fade">
     <div class="container pb-[4.5rem] xl:pb-28 lg:pb-28 md:pb-28">
-        <div class="flex flex-wrap mx-[-15px] md:mx-[-20px] lg:mx-[-20px] xl:mx-[-35px] !mt-[-50px] items-center">
+        <div class="flex flex-wrap mx-0 md:mx-[-20px] lg:mx-[-20px] xl:mx-[-35px] !mt-[-50px] items-center">
 
             {{-- Левая колонка (карточки) --}}
             <div
