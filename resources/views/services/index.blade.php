@@ -149,10 +149,10 @@
                 <div class="flex flex-wrap !justify-center mx-0 lg:mx-[-20px] xl:mx-[-35px] !mt-[-30px] process-wrapper line">
 
                     <!-- 01 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
 
-        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-          <span class="number table-cell text-center align-middle text-[1.1rem] font-bold">
+        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative"> !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
             01
           </span>
         </span>
@@ -164,10 +164,10 @@
                     </div>
 
                     <!-- 02 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
 
-        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-          <span class="number table-cell text-center align-middle text-[1.1rem] font-bold">
+        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative"> !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
             02
           </span>
         </span>
@@ -179,10 +179,10 @@
                     </div>
 
                     <!-- 03 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative after:w-full after:absolute after:content-[''] after:h-px after:z-[1] after:border-t-[rgba(164,174,198,0.2)] after:border-t after:border-solid after:left-[3rem] after:top-6 after:bg-inherit max-lg:after:!hidden">
 
-        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-          <span class="number table-cell text-center align-middle text-[1.1rem] font-bold">
+        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative"> !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
             03
           </span>
         </span>
@@ -194,10 +194,10 @@
                     </div>
 
                     <!-- 04 -->
-                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative">
+                    <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative">
 
-        <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
-          <span class="number table-cell text-center align-middle text-[1.1rem] font-bold">
+        <div class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] text-center mx-auto lg:text-left lg:mx-0 !px-[15px] xl:!px-[35px] lg:!px-[20px] !mt-[30px] max-w-full !relative"> !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
+          <span class="icon btn btn-circle btn-lg btn-soft-primary pointer-events-none !mb-4 mx-auto lg:mx-0 !relative z-[2] w-12 h-12 inline-flex items-center justify-center !rounded-[100%]">
             04
           </span>
         </span>
