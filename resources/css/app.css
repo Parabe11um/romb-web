@@ -89,7 +89,10 @@ input[type="checkbox"] {
     overflow-wrap: anywhere;
 }
 
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Reveal on scroll */
 [data-reveal] {
