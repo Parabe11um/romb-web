@@ -30,7 +30,7 @@
                 Почему выбирают нас
             </h2>
 
-            <div class="flex flex-wrap mx-[-15px] xl:mx-[-35px] lg:mx-[-20px] !mt-[-50px] items-center">
+            <div class="flex flex-wrap mx-0 lg:mx-[-20px] xl:mx-[-35px] !mt-[-50px] items-center">
                 <div
                     class="xl:w-7/12 lg:w-7/12 w-full flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] !px-[15px] !mt-[50px] max-w-full">
                     <figure class="m-0 p-0 flex justify-center">
