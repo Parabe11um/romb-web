@@ -187,7 +187,6 @@ img {
 
 
 
-
 /* Fix Sandbox offcanvas only for mobile */
 @media (max-width: 991.98px) {
 
@@ -204,5 +203,17 @@ img {
         transition: transform .3s ease-in-out;
     }
 
+    .mobile-menu-panel,
+    .mobile-menu-panel .offcanvas-header,
+    .mobile-menu-panel .offcanvas-body {
+        background-color: #1175B3 !important;
+    }
+
+    .mobile-menu-panel .nav-link,
+    .mobile-menu-panel .offcanvas-header h3 {
+        color: #ffffff !important;
+    }
 }
+
+
 

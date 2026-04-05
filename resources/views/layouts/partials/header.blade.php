@@ -14,10 +14,10 @@
                 </button>
             </div>
 
-            <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+            <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start mobile-menu-panel">
 
                 <div class="offcanvas-header xl:hidden lg:hidden flex justify-between p-6">
-                    <h3 class="text-white text-lg mb-0">romb web</h3>
+                    <h3 class="!text-white text-lg mb-0">romb web</h3>
                     <button type="button"
                             class="btn-close btn-close-white"
                             data-bs-dismiss="offcanvas"></button>
