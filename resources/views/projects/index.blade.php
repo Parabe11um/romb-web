@@ -52,14 +52,14 @@
 
                         @foreach($projects as $project)
                             <div class="project item
-            xl:w-4/12 lg:w-6/12 md:w-6/12 w-full
-            xl:px-[20px] lg:px-[20px] md:px-[20px] px-[15px]
-            xl:pb-[80px] lg:pb-[80px] md:pb-[80px] pb-[50px]
-            max-w-full
-            @foreach($project->services as $service)
-                service-{{ $service->id }}
-            @endforeach
-        ">
+                            xl:w-4/12 lg:w-6/12 md:w-6/12 w-full
+                            xl:px-[20px] lg:px-[20px] md:px-[20px] px-[15px]
+                            xl:pb-[70px] lg:pb-[70px] md:pb-[70px] pb-[50px]
+                            max-w-full
+                            @foreach($project->services as $service)
+                                service-{{ $service->id }}
+                            @endforeach
+                        ">
 
                                 <figure class="lift rounded !mb-6 overflow-hidden">
                                     <a href="{{ route('projects.show', $project) }}" class="block">
@@ -71,26 +71,28 @@
                                     </a>
                                 </figure>
 
-                                <div class="project-details flex justify-center flex-col">
-                                    <div class="post-header">
+                                <div class="project-details !flex !flex-col !min-h-[110px]">
+                                    <div class="post-header !min-h-[110px]">
+
                                         @if($project->services->isNotEmpty())
                                             <div class="inline-flex uppercase !tracking-[0.02rem] text-[0.7rem] font-bold
-                            relative align-top !pl-[1.4rem] !mb-2
-                            text-[#747ed1]
-                            before:content-[''] before:absolute before:inline-block
-                            before:translate-y-[-60%] before:w-3 before:h-[0.05rem]
-                            before:left-0 before:top-2/4 before:bg-[#747ed1]">
+                                                relative align-top !pl-[1.4rem] !mb-3
+                                                text-[#747ed1]
+                                                before:content-[''] before:absolute before:inline-block
+                                                before:translate-y-[-60%] before:w-3 before:h-[0.05rem]
+                                                before:left-0 before:top-2/4 before:bg-[#747ed1]">
                                                 {{ $project->services->first()->title }}
                                             </div>
                                         @endif
 
-                                        <h3 class="post-title leading-snug min-h-[72px] overflow-hidden">
+                                        <h3 class="post-title !mb-0 !leading-[1.35] !h-[58px] overflow-hidden">
                                             <a href="{{ route('projects.show', $project) }}"
                                                class="hover:underline block"
                                                style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
                                                 {{ $project->title }}
                                             </a>
                                         </h3>
+
                                     </div>
                                 </div>
 
