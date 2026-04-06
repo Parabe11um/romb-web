@@ -127,75 +127,58 @@ var theme = {
    * Requires assets/js/vendor/imagesloaded.pkgd.min.js
    */
   isotope: () => {
-      var grids = document.querySelectorAll('.itemgrid');
-      if (!grids.length) return;
-
+    var grids = document.querySelectorAll('.itemgrid');
+    if(grids != null) {
       grids.forEach(g => {
-          var itemgrid = g.querySelector('.isotope, .isotope-grid');
-          if (!itemgrid) return;
-
-          var filtersElem = g.querySelector('.isotope-filter');
-          var buttonGroups = g.querySelectorAll('.isotope-filter');
-          var layoutMode = itemgrid.dataset.layout || 'masonry';
-
-          var options = {
-              itemSelector: '.item',
-              layoutMode: layoutMode,
-              percentPosition: true,
-              transitionDuration: '0.7s'
-          };
-
-          if (layoutMode === 'masonry') {
-              options.masonry = {
-                  columnWidth: itemgrid.offsetWidth / 12
-              };
-          }
-
-          var iso = new Isotope(itemgrid, options);
-
-          imagesLoaded(itemgrid).on("progress", function () {
-              if (layoutMode === 'masonry') {
-                  iso.layout();
-              } else {
-                  iso.arrange();
-              }
+        var itemgrid = g.querySelector('.isotope');
+        var filtersElem = g.querySelector('.isotope-filter');
+        var buttonGroups = g.querySelectorAll('.isotope-filter');
+        var iso = new Isotope(itemgrid, {
+          itemSelector: '.item',
+          layoutMode: 'masonry',
+          masonry: {
+            columnWidth: itemgrid.offsetWidth / 12
+          },
+          percentPosition: true,
+          transitionDuration: '0.7s'
+        });
+        imagesLoaded(itemgrid).on("progress", function() {
+          iso.layout({
+            masonry: {
+              columnWidth: itemgrid.offsetWidth / 12
+            }
+          })
+        }),
+        window.addEventListener("resize", function() {
+          iso.arrange({
+            masonry: {
+              columnWidth: itemgrid.offsetWidth / 12
+            }
           });
-
-          window.addEventListener("resize", function () {
-              if (layoutMode === 'masonry') {
-                  iso.arrange({
-                      masonry: {
-                          columnWidth: itemgrid.offsetWidth / 12
-                      }
-                  });
-              } else {
-                  iso.arrange();
+        }, true);
+        if(filtersElem != null) {
+          filtersElem.addEventListener('click', function(event) {
+            if(!matchesSelector(event.target, '.filter-item')) {
+              return;
+            }
+            var filterValue = event.target.getAttribute('data-filter');
+            iso.arrange({
+              filter: filterValue
+            });
+          });
+          for(var i = 0, len = buttonGroups.length; i < len; i++) {
+            var buttonGroup = buttonGroups[i];
+            buttonGroup.addEventListener('click', function(event) {
+              if(!matchesSelector(event.target, '.filter-item')) {
+                return;
               }
-          }, true);
-
-          if (filtersElem != null) {
-              filtersElem.addEventListener('click', function(event) {
-                  if (!matchesSelector(event.target, '.filter-item')) return;
-
-                  var filterValue = event.target.getAttribute('data-filter');
-                  iso.arrange({
-                      filter: filterValue
-                  });
-              });
-
-              for (var i = 0, len = buttonGroups.length; i < len; i++) {
-                  var buttonGroup = buttonGroups[i];
-                  buttonGroup.addEventListener('click', function(event) {
-                      if (!matchesSelector(event.target, '.filter-item')) return;
-
-                      var active = buttonGroup.querySelector('.active');
-                      if (active) active.classList.remove('active');
-
-                      event.target.classList.add('active');
-                  });
-              }
+              buttonGroup.querySelector('.active').classList.remove('active');
+              event.target.classList.add('active');
+            });
           }
+        }
       });
+    }
   },
   /**
    * Onepage Header Offset
