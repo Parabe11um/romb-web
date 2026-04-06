@@ -46,9 +46,8 @@
                         </ul>
                     </div>
 
-                    <div class="flex flex-wrap mx-[-15px] xl:mx-[-20px] lg:mx-[-20px] md:mx-[-20px]
-            !mt-[-50px] xl:!mt-[-80px] lg:!mt-[-80px] md:!mt-[-80px]
-            isotope-grid">
+                    <div class="isotope flex flex-wrap mx-[-15px] xl:mx-[-20px] lg:mx-[-20px] md:mx-[-20px]
+    !mt-[-50px] xl:!mt-[-80px] lg:!mt-[-80px] md:!mt-[-80px]">
 
                         @foreach($projects as $project)
                             <div class="project item
@@ -113,28 +112,3 @@
     </div>
     <!-- /.content-wrapper -->
 @endsection
-@push('scripts')
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const grid = document.querySelector('.isotope-grid');
-            if (!grid) return;
-
-            const iso = new Isotope(grid, {
-                itemSelector: '.project',
-                layoutMode: 'masonry'
-            });
-
-            document.querySelectorAll('.filter-item').forEach(filter => {
-                filter.addEventListener('click', function () {
-                    document.querySelectorAll('.filter-item')
-                        .forEach(i => i.classList.remove('active'));
-
-                    this.classList.add('active');
-
-                    const filterValue = this.getAttribute('data-filter');
-                    iso.arrange({ filter: filterValue });
-                });
-            });
-        });
-    </script>
-@endpush
