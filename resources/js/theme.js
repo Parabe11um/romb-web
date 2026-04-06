@@ -127,58 +127,75 @@ var theme = {
    * Requires assets/js/vendor/imagesloaded.pkgd.min.js
    */
   isotope: () => {
-    var grids = document.querySelectorAll('.itemgrid');
-    if(grids != null) {
+      var grids = document.querySelectorAll('.itemgrid');
+      if (!grids.length) return;
+
       grids.forEach(g => {
-        var itemgrid = g.querySelector('.isotope');
-        var filtersElem = g.querySelector('.isotope-filter');
-        var buttonGroups = g.querySelectorAll('.isotope-filter');
-        var iso = new Isotope(itemgrid, {
-          itemSelector: '.item',
-          layoutMode: 'masonry',
-          masonry: {
-            columnWidth: itemgrid.offsetWidth / 12
-          },
-          percentPosition: true,
-          transitionDuration: '0.7s'
-        });
-        imagesLoaded(itemgrid).on("progress", function() {
-          iso.layout({
-            masonry: {
-              columnWidth: itemgrid.offsetWidth / 12
-            }
-          })
-        }),
-        window.addEventListener("resize", function() {
-          iso.arrange({
-            masonry: {
-              columnWidth: itemgrid.offsetWidth / 12
-            }
-          });
-        }, true);
-        if(filtersElem != null) {
-          filtersElem.addEventListener('click', function(event) {
-            if(!matchesSelector(event.target, '.filter-item')) {
-              return;
-            }
-            var filterValue = event.target.getAttribute('data-filter');
-            iso.arrange({
-              filter: filterValue
-            });
-          });
-          for(var i = 0, len = buttonGroups.length; i < len; i++) {
-            var buttonGroup = buttonGroups[i];
-            buttonGroup.addEventListener('click', function(event) {
-              if(!matchesSelector(event.target, '.filter-item')) {
-                return;
-              }
-              buttonGroup.querySelector('.active').classList.remove('active');
-              event.target.classList.add('active');
-            });
+          var itemgrid = g.querySelector('.isotope, .isotope-grid');
+          if (!itemgrid) return;
+
+          var filtersElem = g.querySelector('.isotope-filter');
+          var buttonGroups = g.querySelectorAll('.isotope-filter');
+          var layoutMode = itemgrid.dataset.layout || 'masonry';
+
+          var options = {
+              itemSelector: '.item',
+              layoutMode: layoutMode,
+              percentPosition: true,
+              transitionDuration: '0.7s'
+          };
+
+          if (layoutMode === 'masonry') {
+              options.masonry = {
+                  columnWidth: itemgrid.offsetWidth / 12
+              };
           }
-        }
+
+          var iso = new Isotope(itemgrid, options);
+
+          imagesLoaded(itemgrid).on("progress", function () {
+              if (layoutMode === 'masonry') {
+                  iso.layout();
+              } else {
+                  iso.arrange();
+              }
+          });
+
+          window.addEventListener("resize", function () {
+              if (layoutMode === 'masonry') {
+                  iso.arrange({
+                      masonry: {
+                          columnWidth: itemgrid.offsetWidth / 12
+                      }
+                  });
+              } else {
+                  iso.arrange();
+              }
+          }, true);
+
+          if (filtersElem != null) {
+              filtersElem.addEventListener('click', function(event) {
+                  if (!matchesSelector(event.target, '.filter-item')) return;
+
+                  var filterValue = event.target.getAttribute('data-filter');
+                  iso.arrange({
+                      filter: filterValue
+                  });
+              });
+
+              for (var i = 0, len = buttonGroups.length; i < len; i++) {
+                  var buttonGroup = buttonGroups[i];
+                  buttonGroup.addEventListener('click', function(event) {
+                      if (!matchesSelector(event.target, '.filter-item')) return;
+
+                      var active = buttonGroup.querySelector('.active');
+                      if (active) active.classList.remove('active');
+
+                      event.target.classList.add('active');
+                  });
+              }
+          }
       });
-    }
   },
   /**
    * Onepage Header Offset
@@ -585,7 +602,7 @@ var theme = {
   },
   /**
    * Loader
-   * 
+   *
    */
   loader: () => {
     var preloader = document.querySelector('.page-loader');
@@ -630,7 +647,7 @@ var theme = {
       progressWrap.addEventListener('click', function(e) {
         e.preventDefault();
         window.scroll({
-          top: 0, 
+          top: 0,
           left: 0,
           behavior: 'smooth'
         });
@@ -759,14 +776,14 @@ var theme = {
       "use strict";
       window.addEventListener("load", function() {
         var forms = document.querySelectorAll(".needs-validation");
-        var inputRecaptcha = document.querySelector("input[data-recaptcha]"); 
+        var inputRecaptcha = document.querySelector("input[data-recaptcha]");
         window.verifyRecaptchaCallback = function (response) {
-          inputRecaptcha.value = response; 
+          inputRecaptcha.value = response;
           inputRecaptcha.dispatchEvent(new Event("change"));
         }
         window.expiredRecaptchaCallback = function () {
-          var inputRecaptcha = document.querySelector("input[data-recaptcha]"); 
-          inputRecaptcha.value = ""; 
+          var inputRecaptcha = document.querySelector("input[data-recaptcha]");
+          inputRecaptcha.value = "";
           inputRecaptcha.dispatchEvent(new Event("change"));
         }
         var validation = Array.prototype.filter.call(forms, function(form) {
@@ -825,9 +842,9 @@ var theme = {
           passToggle.classList.add('uil-eye-slash');
         } else {
           passInput.type = "password";
-          passToggle.classList.remove('uil-eye-slash'); 
+          passToggle.classList.remove('uil-eye-slash');
           passToggle.classList.add('uil-eye');
-        } 
+        }
       }, false);
     }
   },
