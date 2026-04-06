@@ -194,7 +194,7 @@
                                 </p>
                             @endif
 
-                            <a href="{{ route('projects.show', $project) }}"
+                            <a href="{{ route('projects.show', $project->slug) }}"
                                class="text-[#3f78e0] text-sm font-medium mt-4 inline-block">
                                 Смотреть кейс →
                             </a>
