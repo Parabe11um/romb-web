@@ -46,8 +46,9 @@
                         </ul>
                     </div>
 
-                    <div class="isotope flex flex-wrap mx-[-15px] xl:mx-[-20px] lg:mx-[-20px] md:mx-[-20px]
-    !mt-[-50px] xl:!mt-[-80px] lg:!mt-[-80px] md:!mt-[-80px]">
+                    <div class="isotope mx-[-15px] xl:mx-[-20px] lg:mx-[-20px] md:mx-[-20px]
+    !mt-[-50px] xl:!mt-[-80px] lg:!mt-[-80px] md:!mt-[-80px]"
+                         data-layout="fitRows">
 
                         @foreach($projects as $project)
                             <div class="project item
