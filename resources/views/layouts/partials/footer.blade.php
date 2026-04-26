@@ -39,7 +39,7 @@
                         <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="#">Проекты</a>
                         </li>
                         <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="#">Статьи</a></li>
-                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="#">Политика конфиденциальности</a></li>
+                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="{{ route('privacy.policy') }}">Политика конфиденциальности</a></li>
                     </ul>
                 </div>
                 <!-- /.widget -->

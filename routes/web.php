@@ -79,3 +79,5 @@ Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articl
 Route::view('/about', 'about')->name('about');
 Route::view('/contacts', 'contacts')->name('contacts');
 Route::post('/contacts', [ContactController::class, 'send'])->name('contact.send');
+
+Route::view('/privacy-policy', 'privacy-policy')->name('privacy.policy');

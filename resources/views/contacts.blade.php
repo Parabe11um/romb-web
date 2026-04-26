@@ -113,7 +113,7 @@
 
                             <span class="contact-policy__text">
             Я согласен с
-            <a href="#" class="text-[#3f78e0] hover:underline">
+            <a href="{{ route('privacy.policy') }}" class="text-[#3f78e0] hover:underline">
                 политикой обработки персональных данных
             </a>
         </span>
