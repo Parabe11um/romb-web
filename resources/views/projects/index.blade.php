@@ -62,7 +62,7 @@
                         ">
 
                                 <figure class="lift rounded !mb-6 overflow-hidden">
-                                    <a href="{{ route('projects.show', $project) }}" class="block">
+                                    <a href="{{ route('projects.show', $project->slug) }}" class="block">
                                         <img
                                             src="{{ asset('storage/' . $project->preview_image) }}"
                                             alt="{{ $project->title }}"
@@ -86,7 +86,7 @@
                                         @endif
 
                                         <h3 class="post-title !mb-0 !leading-[1.35] !h-[58px] overflow-hidden">
-                                            <a href="{{ route('projects.show', $project) }}"
+                                            <a href="{{ route('projects.show', $project->slug) }}"
                                                class="hover:underline block"
                                                style="display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">
                                                 {{ $project->title }}
