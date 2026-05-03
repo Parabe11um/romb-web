@@ -27,7 +27,7 @@
 
                     {{-- IMAGE --}}
                         <figure class="card-img-top overlay overlay-1 hover-scale group
-                   h-[400px] overflow-hidden rounded-t-lg">
+                   overflow-hidden rounded-t-lg">
                             <a href="{{ route('articles.show', $article->slug) }}">
                                 <img
                                     src="{{ asset('storage/' . $article->preview_image) }}"
