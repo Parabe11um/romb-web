@@ -33,6 +33,17 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+
+    /**
+     * Access to Filament admin panel.
+     */
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return in_array($this->email, [
+            'r.a.bazhenoff@gmail.com',
+        ], true);
+    }
+
     /**
      * Get the attributes that should be cast.
      *
