@@ -29,14 +29,14 @@
                         <div class="card h-full flex flex-col">
 
                             <figure class="card-img-top overlay overlay-1 hover-scale group
-                   h-[400px] overflow-hidden rounded-t-lg">
-                                <a href="{{ route('articles.show', $article->slug) }}">
+               h-[240px] lg:h-[260px] overflow-hidden rounded-t-lg">
+                                <a href="{{ route('articles.show', $article->slug) }}" class="block w-full h-full">
                                     <img
                                         src="{{ asset('storage/' . $article->preview_image) }}"
                                         alt="{{ $article->title }}"
-                                        class="w-full h-full object-cover
-                       !transition-all !duration-[0.35s] !ease-in-out
-                       group-hover:scale-105"
+                                        class="!w-full !h-full !object-cover
+                   !transition-all !duration-[0.35s] !ease-in-out
+                   group-hover:scale-105"
                                     >
                                     <span class="bg"></span>
                                 </a>
