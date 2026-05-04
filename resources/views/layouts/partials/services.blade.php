@@ -1,5 +1,6 @@
 <section class="wrapper bg-gradient-sky pb-24">
     <div class="container">
+        <div data-reveal>
         <div class="grid md:grid-cols-3 gap-16 text-center">
 
             @foreach($services as $i => $service)
@@ -28,6 +29,7 @@
                 </div>
             @endforeach
 
+        </div>
         </div>
     </div>
 </section>

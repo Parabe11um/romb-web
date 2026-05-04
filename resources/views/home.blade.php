@@ -7,9 +7,9 @@
         @include('layouts.partials.banner')
     </div>
 
-    <div data-reveal>
-        @include('layouts.partials.services', ['services' => $services])
-    </div>
+
+    @include('layouts.partials.services', ['services' => $services])
+
 
     <div data-reveal>
         @include('layouts.partials.projects', ['projects' => $projects])
