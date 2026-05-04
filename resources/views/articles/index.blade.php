@@ -98,7 +98,7 @@
 
                                     <li class="post-date inline-block">
                                         <i class="uil uil-calendar-alt pr-[0.2rem] align-[-.05rem]"></i>
-                                        <span>{{ $article->created_at->format('d M Y') }}</span>
+                                        <span>{{ $article->created_at->format('d.m.Y') }}</span>
                                     </li>
 
                                     <li
