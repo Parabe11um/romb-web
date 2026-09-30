@@ -34,11 +34,11 @@
                 <div class="widget !text-[#cacaca]">
                     <h4 class="widget-title !text-white !mb-3">Страницы</h4>
                     <ul class="pl-0 list-none   !mb-0">
-                        <li><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="#">О нас</a></li>
-                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="#">Услуги</a></li>
-                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="#">Проекты</a>
+                        <li><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="{{ route('about') }}">О нас</a></li>
+                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="{{ route('services.index') }}">Услуги</a></li>
+                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="{{ route('projects.index') }}">Проекты</a>
                         </li>
-                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="#">Статьи</a></li>
+                        <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="{{ route('articles.index') }}">Статьи</a></li>
                         <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#5eb9f0]" href="{{ route('privacy.policy') }}">Политика конфиденциальности</a></li>
                     </ul>
                 </div>

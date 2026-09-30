@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
@@ -11,6 +10,7 @@ class ArticleController extends Controller
     {
         $articles = Article::where('is_active', true)
             ->latest()
+            ->orderByDesc('id')
             ->paginate(6);
 
         return view('articles.index', compact('articles'));
@@ -25,4 +25,3 @@ class ArticleController extends Controller
         return view('articles.show', compact('article'));
     }
 }
-

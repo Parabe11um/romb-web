@@ -3,6 +3,7 @@
 @import './plugins.css';
 @import './style.css';
 @import './sky.css';
+@import './visual-refresh.css';
 
 
 
@@ -214,6 +215,5 @@ img {
         color: #ffffff !important;
     }
 }
-
 
 
