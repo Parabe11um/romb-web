@@ -1,5 +1,5 @@
 @if($articles->isNotEmpty())
-    <section class="rw-articles-section">
+    <section class="rw-articles-section rw-home-articles">
         <div class="container">
             <div class="rw-section-heading">
                 <div>
