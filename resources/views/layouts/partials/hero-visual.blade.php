@@ -4,12 +4,11 @@
     <div class="rw-browser">
         <div class="rw-browser__toolbar">
             <span class="rw-browser__dots"><i></i><i></i><i></i></span>
-            <span class="rw-browser__address">romb-web / ваш следующий проект</span>
+            <span class="rw-browser__address">ваш следующий проект</span>
             <span class="rw-browser__window">↗</span>
         </div>
         <div class="rw-browser__page">
             <div class="rw-preview-nav">
-                <span class="rw-preview-brand">r<span>◇</span>mb</span>
                 <span class="rw-preview-nav__lines"><i></i><i></i><i></i></span>
                 <span class="rw-preview-nav__button"></span>
             </div>
@@ -33,13 +32,5 @@
                 <span><x-service-icon name="support" />Поддержка</span>
             </div>
         </div>
-    </div>
-    <div class="rw-visual-note rw-visual-note--code">
-        <x-service-icon name="development" />
-        <div><strong>Продумано внутри</strong><span>Удобно снаружи</span></div>
-    </div>
-    <div class="rw-visual-note rw-visual-note--launch">
-        <span class="rw-visual-note__check">✓</span>
-        <div><strong>Готов к развитию</strong><span>Запуск — только начало</span></div>
     </div>
 </div>
