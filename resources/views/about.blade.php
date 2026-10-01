@@ -51,7 +51,7 @@
                         <div class="card plain accordion-item">
                             <div class="card-header !mb-0 !p-[0_0_.8rem_0] !border-0 !bg-inherit" id="headingOne">
                                 <button
-                                    class="accordion-button !text-[0.9rem] hover:!text-[#5eb9f0] before:!text-[#5eb9f0]"
+                                    class="accordion-button !text-[0.9rem] rw-accordion-trigger"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne"
                                     aria-expanded="true"
@@ -86,7 +86,7 @@
                         <div class="card plain accordion-item">
                             <div class="card-header !mb-0 !p-[0_0_.8rem_0] !border-0 !bg-inherit" id="headingTwo">
                                 <button
-                                    class="collapsed !text-[0.9rem] hover:!text-[#5eb9f0] before:!text-[#5eb9f0]"
+                                    class="collapsed !text-[0.9rem] rw-accordion-trigger"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo"
                                     aria-expanded="false"
@@ -122,7 +122,7 @@
                         <div class="card plain accordion-item">
                             <div class="card-header !mb-0 !p-[0_0_.8rem_0] !border-0 !bg-inherit" id="headingThree">
                                 <button
-                                    class="collapsed !text-[0.9rem] hover:!text-[#5eb9f0] before:!text-[#5eb9f0]"
+                                    class="collapsed !text-[0.9rem] rw-accordion-trigger"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree"
                                     aria-expanded="false"

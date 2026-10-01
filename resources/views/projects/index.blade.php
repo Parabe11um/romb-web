@@ -26,21 +26,20 @@
                 <div class="itemgrid grid-view projects-masonry">
                     <div class="isotope-filter !relative !z-[5] filter !mb-10">
 
-                        <ul class="inline m-0 p-0 list-none">
-                            <li class="inline">
-                                <a class="filter-item uppercase text-[0.7rem] font-bold cursor-pointer active"
-                                   data-filter="*">
+                        <ul class="rw-project-filters">
+                            <li>
+                                <button type="button" class="filter-item rw-button rw-button--compact rw-button--secondary active"
+                                        data-filter="*">
                                     Все
-                                </a>
+                                </button>
                             </li>
 
                             @foreach($services as $service)
-                                <li class="inline before:content-[''] before:inline-block before:w-[0.2rem] before:h-[0.2rem]
-                       before:ml-2 before:mr-[0.8rem] before:rounded-full before:bg-[rgba(30,34,40,.2)]">
-                                    <a class="filter-item uppercase text-[0.7rem] font-bold cursor-pointer hover:!text-[#3f78e0]"
-                                       data-filter=".service-{{ $service->id }}">
+                                <li>
+                                    <button type="button" class="filter-item rw-button rw-button--compact rw-button--secondary"
+                                            data-filter=".service-{{ $service->id }}">
                                         {{ $service->title }}
-                                    </a>
+                                    </button>
                                 </li>
                             @endforeach
                         </ul>

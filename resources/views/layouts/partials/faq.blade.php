@@ -10,7 +10,7 @@
                 <p class="!mb-6">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
                     sem nec elit. Nullam quis risus eget urna mollis ornare.</p>
                 <a href="#"
-                   class="btn btn-sky !text-white !bg-[#5eb9f0] border-[#5eb9f0] hover:text-white hover:!bg-[#5eb9f0] hover:!border-[#5eb9f0] focus:shadow-[rgba(88,167,216,1)] active:text-white active:!bg-[#5eb9f0] active:border-[#5eb9f0] disabled:text-white disabled:!bg-[#5eb9f0] disabled:border-[#5eb9f0] !rounded-[50rem] hover:translate-y-[-0.15rem] hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]">All
+                   class="rw-button">All
                     FAQ</a>
             </div>
             <!--/column -->
@@ -20,7 +20,7 @@
                     <div class="card accordion-item !mb-5 !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
                         <div class="card-header !mb-0 !p-[.9rem_1.3rem_.85rem] !border-0 !bg-inherit"
                              id="accordion-heading-3-1">
-                            <button class="hover:!text-[#5eb9f0] before:!text-[#5eb9f0] collapsed"
+                            <button class="rw-accordion-trigger collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#accordion-collapse-3-1"
                                     aria-expanded="false" aria-controls="accordion-collapse-3-1">How do I get my
                                 subscription receipt?
@@ -44,7 +44,7 @@
                     <div class="card accordion-item !mb-5 !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
                         <div class="card-header !mb-0 !p-[.9rem_1.3rem_.85rem] !border-0 !bg-inherit"
                              id="accordion-heading-3-2">
-                            <button class="hover:!text-[#5eb9f0] before:!text-[#5eb9f0] collapsed"
+                            <button class="rw-accordion-trigger collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#accordion-collapse-3-2"
                                     aria-expanded="false" aria-controls="accordion-collapse-3-2">Are there any
                                 discounts for people in need?
@@ -68,7 +68,7 @@
                     <div class="card accordion-item !mb-5 !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
                         <div class="card-header !mb-0 !p-[.9rem_1.3rem_.85rem] !border-0 !bg-inherit"
                              id="accordion-heading-3-3">
-                            <button class="hover:!text-[#5eb9f0] before:!text-[#5eb9f0] collapsed"
+                            <button class="rw-accordion-trigger collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#accordion-collapse-3-3"
                                     aria-expanded="false" aria-controls="accordion-collapse-3-3">Do you offer a free
                                 trial edit?
@@ -92,7 +92,7 @@
                     <div class="card accordion-item !mb-5 !shadow-[0_0.25rem_1.75rem_rgba(30,34,40,0.07)]">
                         <div class="card-header !mb-0 !p-[.9rem_1.3rem_.85rem] !border-0 !bg-inherit"
                              id="accordion-heading-3-4">
-                            <button class="hover:!text-[#5eb9f0] before:!text-[#5eb9f0] collapsed"
+                            <button class="rw-accordion-trigger collapsed"
                                     data-bs-toggle="collapse" data-bs-target="#accordion-collapse-3-4"
                                     aria-expanded="false" aria-controls="accordion-collapse-3-4">How do I reset my
                                 Account password?
