@@ -92,7 +92,7 @@
         @if (count($projects))
             <section class="personal-section" id="projects" aria-labelledby="projects-title">
                 <div class="personal-container">
-                    <div class="personal-section__heading" data-reveal><p class="personal-eyebrow">03 / Проекты</p><h2 id="projects-title">То, что я создаю<br>и развиваю</h2></div>
+                    <div class="personal-section__heading" data-reveal><p class="personal-eyebrow">03 / Проекты</p><h2 id="projects-title">Недавние</h2></div>
                     <div class="personal-projects">
                         @foreach ($projects as $project)
                             @php($projectUrl = \App\Models\PersonalPage::webUrl($project['url'] ?? null))
