@@ -1,0 +1,10 @@
+.rw-button { display: inline-flex; gap: 1.2rem; align-items: center; justify-content: center; max-width: 100%; padding: .85rem 1.35rem; border: 0; background: #258cc8; color: #fff; border-radius: .5rem; font-family: inherit; font-size: .8rem; font-weight: 700; line-height: 1.7; text-align: center; text-decoration: none; vertical-align: middle; cursor: pointer; appearance: none; transition: background .2s, color .2s; }
+.rw-button:hover { color: #fff; background: #1974aa; }
+.rw-button:active { background: #17557c; }
+.rw-button:disabled, .rw-button[aria-disabled="true"] { opacity: .5; cursor: default; pointer-events: none; }
+.rw-button--compact { padding: .5rem .85rem; }
+.rw-button--secondary { color: #287cae; background: #f0f7fc; box-shadow: inset 0 0 0 1px #c9dfed; }
+.rw-button--secondary:hover { color: #17557c; background: #e2f1fa; }
+.rw-button--secondary:active, .rw-button--secondary.active, .rw-button--secondary[aria-current="page"] { color: #fff; background: #258cc8; box-shadow: none; }
+.rw-button:focus-visible { outline: 3px solid #258cc8; outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) { .rw-button { transition: none; } }

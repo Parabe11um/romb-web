@@ -1,11 +1,20 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-yuDIxzhj.css",
+    "file": "assets/app-DXt_pUpQ.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
     "names": [
       "app.css"
+    ]
+  },
+  "resources/css/personal.css": {
+    "file": "assets/personal-B8QKg1SA.css",
+    "src": "resources/css/personal.css",
+    "isEntry": true,
+    "name": "personal",
+    "names": [
+      "personal.css"
     ]
   },
   "resources/fonts/Custom.woff": {
@@ -32,6 +41,12 @@
     "file": "assets/app-DyY3nx4E.js",
     "name": "app",
     "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/personal.js": {
+    "file": "assets/personal-CF9AY6Wb.js",
+    "name": "personal",
+    "src": "resources/js/personal.js",
     "isEntry": true
   }
 }
