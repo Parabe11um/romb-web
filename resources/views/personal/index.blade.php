@@ -58,7 +58,7 @@
                 <div class="personal-section__heading" data-reveal><p class="personal-eyebrow">01 / Обо мне</p><h2 id="about-title">{{ $page->about_title }}</h2></div>
                 <div class="personal-about">
                     <div class="personal-about__text" data-reveal>
-                        @foreach (preg_split('/\R\s*\R/', $page->about_text ?? '') as $paragraph)<p>{{ $paragraph }}</p>@endforeach
+                        @foreach (preg_split('/\R\s*\R/u', $page->about_text ?? '') as $paragraph)<p>{{ $paragraph }}</p>@endforeach
                     </div>
                     @if (count($skills))
                         <div class="personal-skills" data-reveal>
@@ -81,7 +81,7 @@
                             <article class="personal-job" data-reveal>
                                 <div class="personal-job__company"><p class="personal-job__period">{{ $job['period'] ?? '' }}</p><h3>{{ $job['company'] ?? '' }}</h3></div>
                                 <div class="personal-job__details"><h4>{{ $job['role'] ?? '' }}</h4><p>{{ $job['description'] ?? '' }}</p>
-                                    @if (!empty($job['results']))<ul>@foreach (array_filter(preg_split('/\R/', $job['results'])) as $result)<li>{{ $result }}</li>@endforeach</ul>@endif
+                                    @if (!empty($job['results']))<ul>@foreach (array_filter(preg_split('/\R/u', $job['results'])) as $result)<li>{{ $result }}</li>@endforeach</ul>@endif
                                 </div>
                             </article>
                         @endforeach
