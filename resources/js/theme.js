@@ -339,9 +339,11 @@ var theme = {
       pagi.className = "swiper-pagination";
       var navi = document.createElement('div');
       navi.className = "swiper-navigation";
-      var prev = document.createElement('div');
+      var prev = document.createElement('button');
+      prev.type = "button";
       prev.className = "swiper-button swiper-button-prev";
-      var next = document.createElement('div');
+      var next = document.createElement('button');
+      next.type = "button";
       next.className = "swiper-button swiper-button-next";
       slider1.appendChild(controls);
       controls.appendChild(navi);
@@ -880,7 +882,7 @@ var theme = {
    * Requires assets/js/vendor/clipboard.min.js
    */
   codeSnippet: () => {
-    var btnHtml = '<button type="button" class="btn btn-sm btn-white rounded-pill btn-clipboard">Copy</button>'
+    var btnHtml = '<button type="button" class="rw-button rw-button--compact btn-clipboard">Copy</button>'
     document.querySelectorAll('.code-wrapper-inner').forEach(function(element) {
       element.insertAdjacentHTML('beforebegin', btnHtml)
     })
