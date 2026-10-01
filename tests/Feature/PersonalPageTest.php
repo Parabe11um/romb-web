@@ -45,6 +45,36 @@ class PersonalPageTest extends TestCase
         $this->post('https://me.romb-web.ru/contacts', [])->assertNotFound();
     }
 
+    public function test_cyrillic_words_stay_intact_in_paragraphs_and_experience_results(): void
+    {
+        $page = PersonalPage::find(1);
+        $paragraphs = [
+            'Развиваю сервисы в разных отраслях',
+            'Работаю над архитектурой страховых проектов.',
+        ];
+        $results = [
+            'Проектирование IT-архитектуры продукта.',
+            'Редизайн личных кабинетов физических и юридических лиц.',
+            'Развитие онлайн-калькуляторов страхования.',
+        ];
+        $experience = $page->experience;
+        $experience[0]['results'] = $results[0]."\r\n".$results[1]."\n".$results[2];
+        $page->update([
+            'about_text' => implode("\r\n \r\n", $paragraphs),
+            'experience' => $experience,
+        ]);
+
+        $response = $this->get('https://me.romb-web.ru/')->assertOk();
+
+        foreach ($paragraphs as $paragraph) {
+            $response->assertSee('<p>'.$paragraph.'</p>', false);
+        }
+        foreach ($results as $result) {
+            $response->assertSee('<li>'.$result.'</li>', false);
+        }
+        $response->assertDontSee("\u{FFFD}", false);
+    }
+
     public function test_unpublished_or_missing_page_is_not_public(): void
     {
         PersonalPage::find(1)->update(['is_published' => false]);
