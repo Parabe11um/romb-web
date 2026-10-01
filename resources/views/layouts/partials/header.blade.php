@@ -9,7 +9,7 @@
             </div>
 
             <div class="navbar-other ml-auto xl:hidden lg:hidden">
-                <button class="hamburger offcanvas-nav-btn">
+                <button type="button" class="hamburger offcanvas-nav-btn rw-icon-button" aria-label="Открыть меню">
                     <span></span>
                 </button>
             </div>
@@ -19,7 +19,7 @@
                 <div class="offcanvas-header xl:hidden lg:hidden flex justify-between p-6">
                     <h3 class="!text-white text-lg mb-0">romb web</h3>
                     <button type="button"
-                            class="btn-close btn-close-white"
+                            class="btn-close btn-close-white rw-icon-button" aria-label="Закрыть меню"
                             data-bs-dismiss="offcanvas"></button>
                 </div>
 
