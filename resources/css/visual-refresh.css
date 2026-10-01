@@ -46,6 +46,37 @@
 .rw-preview-tiles > span { display: flex; align-items: center; gap: .35rem; padding: .55rem .35rem; border: 1px solid #e8edf2; border-radius: .3rem; color: #587189; font-size: .4rem; font-weight: 600; }
 .rw-icon { display: block; width: 1.6rem; height: 1.6rem; flex-shrink: 0; }
 .rw-preview-tiles .rw-icon { width: .9rem; height: .9rem; color: #258cc8; }
+.rw-about-visual { max-width: 29rem; margin: 0 auto; }
+.rw-about-board__heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.rw-about-board__heading > strong { color: #24364a; font-size: .85rem; }
+.rw-about-board__heading > span { display: flex; gap: .35rem; }
+.rw-about-board__heading > span > i { width: 1.1rem; height: .15rem; border-radius: 1rem; background: #d4dfe8; }
+.rw-about-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+.rw-about-board__stage { min-width: 0; padding: .75rem .55rem; border: 1px solid #e0eaf1; border-radius: .45rem; background: #f8fbfe; }
+.rw-about-board__number { display: block; margin-bottom: .7rem; color: #8394a5; font: 500 .5rem/1 monospace; }
+.rw-about-board__stage > strong { display: block; margin-top: .8rem; color: #3b5871; font-size: .5rem; line-height: 1.4; }
+.rw-about-wireframe, .rw-about-code, .rw-about-support { height: 5.2rem; border-radius: .3rem; }
+.rw-about-wireframe { padding: .55rem; border: 1px solid #d9e8f2; background: #fff; }
+.rw-about-wireframe__nav { display: block; width: 70%; height: .15rem; border-radius: 1rem; background: #d4dfe8; }
+.rw-about-wireframe__hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: .35rem; margin-top: .4rem; padding: .3rem; background: #edf7fd; border-radius: .2rem; }
+.rw-about-wireframe__hero > span:first-child > i { display: block; height: .12rem; margin-bottom: .2rem; border-radius: 1rem; background: #83b9db; }
+.rw-about-wireframe__hero > span:first-child > i:last-child { width: 60%; background: #258cc8; }
+.rw-about-wireframe__picture { aspect-ratio: 1; max-height: 1.7rem; border-radius: .2rem; background: #c5e4f7; }
+.rw-about-wireframe__tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: .2rem; margin-top: .4rem; }
+.rw-about-wireframe__tiles > i { height: .55rem; border: 1px solid #d9e8f2; border-radius: .15rem; background: #f4f9fd; }
+.rw-about-code { display: flex; flex-direction: column; justify-content: center; gap: .6rem; padding: .6rem; background: #2d87bc; }
+.rw-about-code > span { color: #fff; text-align: center; font: 700 1.5rem/1 monospace; }
+.rw-about-code i { display: block; width: 80%; height: .12rem; margin: .2rem 0; border-radius: 1rem; background: #a5d4ef; }
+.rw-about-code i:nth-child(2) { width: 60%; margin-left: .4rem; }
+.rw-about-code i:last-child { width: 70%; }
+.rw-about-support { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .7rem; border: 1px solid #d9edf9; background: #edf7fd; }
+.rw-about-support .rw-icon { width: 2.5rem; height: 2.5rem; color: #258cc8; }
+.rw-about-support > span { display: flex; gap: .25rem; }
+.rw-about-support i { width: .6rem; height: .2rem; border-radius: 1rem; background: #b8dbee; }
+.rw-about-support i:first-child { background: #258cc8; }
+.rw-about-board__flow { display: flex; align-items: center; padding: 1rem 12% .2rem; }
+.rw-about-board__flow > i { width: .4rem; height: .4rem; flex-shrink: 0; border: 1px solid #a9d2ec; border-radius: 50%; background: #edf7fd; }
+.rw-about-board__flow > span { flex: 1; height: 1px; background: #d9e8f2; }
 .rw-home-services { padding: 3.5rem 0 4rem; background: #f4f9fc; border-top: 1px solid #eaf1f6; }
 .rw-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1.7rem; }
 .rw-section-heading .rw-eyebrow { margin-bottom: .55rem; }
@@ -129,6 +160,13 @@
     .rw-preview-tiles { gap: .3rem; }
     .rw-preview-tiles > span { gap: .2rem; padding: .45rem .25rem; font-size: .32rem; }
     .rw-preview-tiles .rw-icon { width: .75rem; height: .75rem; }
+    .rw-about-board { gap: .4rem; }
+    .rw-about-board__stage { padding: .6rem .4rem; }
+    .rw-about-board__stage > strong { font-size: .43rem; overflow-wrap: anywhere; }
+    .rw-about-wireframe, .rw-about-code, .rw-about-support { height: 4.2rem; }
+    .rw-about-wireframe { padding: .4rem; }
+    .rw-about-code { padding: .4rem; }
+    .rw-about-code > span { font-size: 1.25rem; }
     .rw-home-services, .rw-articles-section, .rw-home-projects, .rw-home-steps { padding: 2.5rem 0; }
     .rw-section-heading { align-items: flex-start; flex-direction: column; }
     .rw-section-title { font-size: 1.4rem; }

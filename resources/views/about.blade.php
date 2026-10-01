@@ -33,14 +33,7 @@
             <div class="flex flex-wrap mx-0 lg:mx-[-20px] xl:mx-[-35px] !mt-[-50px] items-center">
                 <div
                     class="xl:w-7/12 lg:w-7/12 w-full flex-[0_0_auto] xl:!px-[35px] lg:!px-[20px] !px-[15px] !mt-[50px] max-w-full">
-                    <figure class="m-0 p-0 flex justify-center">
-                        <img
-                            class="img-auto w-full max-w-[420px] xl:max-w-[460px]"
-                            src="images/i22.png"
-                            srcset="images/i22%402x.png 2x"
-                            alt="image"
-                        >
-                    </figure>
+                    @include('layouts.partials.about-visual')
                 </div>
                 <!--/column -->
 
