@@ -136,7 +136,6 @@ img {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    font-family: Arial, sans-serif;
 }
 
 .cookie-container {
@@ -145,6 +144,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
 .cookie-text {
@@ -157,24 +157,8 @@ img {
     text-decoration: dashed;
 }
 
-#cookie-agree-button {
-    background-color: #71C913;
-    border: none;
-    border-radius: 25px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 8px 20px;
-    transition: background-color 0.3s;
-    margin-right: 1rem;
-}
-
 #cookie-banner.hidden {
     display: none !important;
-}
-
-#cookie-agree-button:hover {
-    background-color: #52910E;
 }
 
 @media(max-width: 768px) {
