@@ -195,7 +195,7 @@
                             @endif
 
                             <a href="{{ route('projects.show', $project->slug) }}"
-                               class="text-[#3f78e0] text-sm font-medium mt-4 inline-block">
+                               class="rw-text-link mt-4">
                                 Смотреть кейс →
                             </a>
 
