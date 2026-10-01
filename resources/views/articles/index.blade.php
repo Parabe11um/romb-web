@@ -24,7 +24,7 @@
                     @endforeach
                 </div>
                 @if($articles->hasPages())
-                    <div class="rw-pagination">{{ $articles->links() }}</div>
+                    <div class="rw-pagination">{{ $articles->links('components.pagination') }}</div>
                 @endif
             @else
                 <div class="rw-articles-empty">
