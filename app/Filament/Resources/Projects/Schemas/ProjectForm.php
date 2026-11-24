@@ -19,9 +19,15 @@ class ProjectForm
                 TextInput::make('slug')
                     ->required(),
                 FileUpload::make('preview_image')
-                    ->image(),
+                    ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                    ->maxSize(4096)
+                    ->preventFilePathTampering(),
                 FileUpload::make('detail_image')
-                    ->image(),
+                    ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                    ->maxSize(4096)
+                    ->preventFilePathTampering(),
                 Textarea::make('excerpt')
                     ->columnSpanFull(),
                 Textarea::make('content')

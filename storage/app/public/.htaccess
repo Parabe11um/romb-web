@@ -1,0 +1,10 @@
+# Deny HTTP access to PHP-like files in uploaded media.
+<FilesMatch "(?i)[.](php[0-9]*|phtml|pht|phar|phps)([.]|$)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>

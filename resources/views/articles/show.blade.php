@@ -47,7 +47,7 @@
                         @endif
 
                         <div class="prose max-w-none prose-img:rounded prose-img:my-8">
-                            {!! $article->content !!}
+                            {!! str($article->content ?? '')->sanitizeHtml() !!}
                         </div>
 
                     </div>

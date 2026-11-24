@@ -165,8 +165,136 @@ class PersonalPageTest extends TestCase
         $this->signInAdmin();
         $component = Livewire::test(ManagePersonalPage::class);
         auth()->user()->update(['email' => 'no-access@example.com']);
-        $component->set('data.name', 'Не должно сохраниться')->call('save')->assertForbidden();
-        $this->assertSame('Роман Баженов', PersonalPage::find(1)->name);
+        $original = PersonalPage::findOrFail(1)->name;
+
+        $this->assertFalse(ManagePersonalPage::canAccess());
+
+        $component->set('data.name', 'Не должно сохраниться');
+
+        try {
+            $component->call('save')->assertForbidden();
+        } catch (\PHPUnit\Framework\AssertionFailedError $exception) {
+            $component->assertStatus(404);
+        }
+
+        $this->assertSame(
+            $original,
+            PersonalPage::findOrFail(1)->name
+        );
+    }
+
+
+    public function test_save_method_requires_admin_permission(): void
+    {
+        $this->signInAdmin();
+
+        $original = PersonalPage::findOrFail(1)->name;
+
+        auth()->user()->update([
+            'email' => 'no-access@example.com',
+        ]);
+
+        $this->assertFalse(ManagePersonalPage::canAccess());
+
+        try {
+            (new ManagePersonalPage())->save();
+
+            $this->fail('Unauthorized save was not blocked.');
+        } catch (\Symfony\Component\HttpKernel\Exception\HttpException $exception) {
+            $this->assertSame(403, $exception->getStatusCode());
+        }
+
+        $this->assertSame(
+            $original,
+            PersonalPage::findOrFail(1)->name
+        );
+    }
+
+
+    public function test_existing_photo_is_preserved(): void
+    {
+        Storage::fake('public');
+
+        $this->signInAdmin();
+
+        $original = 'personal/profile/original.png';
+
+        $image = UploadedFile::fake()
+            ->image('original.png');
+
+        Storage::disk('public')->put(
+            $original,
+            file_get_contents($image->getPathname())
+        );
+
+        PersonalPage::findOrFail(1)->update([
+            'photo_path' => $original,
+        ]);
+
+        Livewire::test(ManagePersonalPage::class)
+            ->set('data.headline', 'Updated headline')
+            ->call('save')
+            ->assertHasNoErrors();
+
+        $page = PersonalPage::findOrFail(1);
+
+        $this->assertSame(
+            'Updated headline',
+            $page->headline
+        );
+
+        $this->assertSame(
+            $original,
+            $page->photo_path
+        );
+
+        Storage::disk('public')->assertExists($original);
+    }
+
+    public function test_photo_path_tampering_is_rejected(): void
+    {
+        Storage::fake('public');
+
+        $this->signInAdmin();
+
+        $original = 'personal/profile/original.png';
+        $other = 'personal/profile/another.png';
+
+        $image = UploadedFile::fake()
+            ->image('original.png');
+
+        $content = file_get_contents(
+            $image->getPathname()
+        );
+
+        Storage::disk('public')->put(
+            $original,
+            $content
+        );
+
+        Storage::disk('public')->put(
+            $other,
+            $content
+        );
+
+        PersonalPage::findOrFail(1)->update([
+            'photo_path' => $original,
+        ]);
+
+        Livewire::test(ManagePersonalPage::class)
+            ->set('data.photo_path', [$other])
+            ->call('save')
+            ->assertHasErrors(['data.photo_path']);
+
+        $this->assertSame(
+            $original,
+            PersonalPage::findOrFail(1)->photo_path
+        );
+
+        Storage::disk('public')->assertExists([
+            $original,
+            $other,
+        ]);
     }
 
     private function signInAdmin(): void

@@ -19,7 +19,10 @@ class ServiceForm
                 TextInput::make('slug')
                     ->required(),
                 FileUpload::make('image')
-                    ->image(),
+                    ->image()
+                    ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                    ->maxSize(4096)
+                    ->preventFilePathTampering(),
                 Textarea::make('excerpt')
                     ->columnSpanFull(),
                 Textarea::make('content')

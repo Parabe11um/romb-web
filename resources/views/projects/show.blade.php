@@ -92,7 +92,7 @@
                         </h2>
 
                         <div class="prose max-w-none text-[#60697b]">
-                            {!! $project->content !!}
+                            {!! str($project->content ?? '')->sanitizeHtml() !!}
                         </div>
                     </div>
 

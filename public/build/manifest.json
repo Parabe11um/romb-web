@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DXt_pUpQ.css",
+    "file": "assets/app-CO0W76Zz.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -38,7 +38,7 @@
     "src": "resources/fonts/Unicons.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DyY3nx4E.js",
+    "file": "assets/app-bDUc9ugw.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
