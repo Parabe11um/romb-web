@@ -51,6 +51,9 @@ class ArticleResource extends Resource
                 ->directory('articles')
                 ->visibility('public')
                 ->image()
+                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->maxSize(4096)
+                ->preventFilePathTampering()
                 ->imageEditor()
                 ->required(),
 
@@ -58,12 +61,18 @@ class ArticleResource extends Resource
                 ->disk('public')
                 ->directory('articles')
                 ->visibility('public')
-                ->image(),
+                ->image()
+                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->maxSize(4096)
+                ->preventFilePathTampering(),
 
             Textarea::make('excerpt')
                 ->rows(3),
 
             RichEditor::make('content')
+                ->fileAttachmentsAcceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->fileAttachmentsMaxSize(4096)
+                ->preventFileAttachmentPathTampering()
                 ->columnSpanFull(),
 
             Section::make('SEO')

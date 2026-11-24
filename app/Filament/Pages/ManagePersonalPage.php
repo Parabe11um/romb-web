@@ -47,7 +47,7 @@ class ManagePersonalPage extends Page
 
     public function form(Schema $schema): Schema
     {
-        return $schema->statePath('data')->model(PersonalPage::class)->components([
+        return $schema->statePath('data')->model(fn () => PersonalPage::findOrFail(1))->components([
             Section::make('Публикация и главный экран')->description('Изменения появляются на сайте сразу после сохранения.')->schema([
                 Toggle::make('is_published')->label('Страница опубликована'),
                 TextInput::make('name')->label('Имя')->required()->maxLength(120),
@@ -115,7 +115,7 @@ class ManagePersonalPage extends Page
     private function imageUpload(string $name, string $label, string $directory): FileUpload
     {
         return FileUpload::make($name)->label($label)->image()->disk('public')->directory($directory)
-            ->visibility('public')->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])->maxSize(4096);
+            ->visibility('public')->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])->maxSize(4096)->preventFilePathTampering();
     }
 
     public function save(): void

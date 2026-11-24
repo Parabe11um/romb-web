@@ -57,7 +57,7 @@
         <section class="wrapper bg-white py-24">
             <div class="container max-w-5xl">
                 <div class="prose max-w-none text-[#343f52]">
-                    {!! $service->content !!}
+                    {!! str($service->content ?? '')->sanitizeHtml() !!}
                 </div>
             </div>
         </section>

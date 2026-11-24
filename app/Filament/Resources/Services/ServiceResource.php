@@ -56,6 +56,9 @@ class ServiceResource extends Resource
                         ->directory('services')
                         ->visibility('public')
                         ->image()
+                        ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                        ->maxSize(4096)
+                        ->preventFilePathTampering()
                         ->imageEditor(),
 
                     Textarea::make('excerpt')
@@ -87,6 +90,9 @@ class ServiceResource extends Resource
                         ->directory('services/hero')
                         ->visibility('public')
                         ->image()
+                        ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                        ->maxSize(4096)
+                        ->preventFilePathTampering()
                         ->imageEditor(),
                 ])
                 ->columns(2)
@@ -95,6 +101,9 @@ class ServiceResource extends Resource
             Section::make('Описание услуги')
                 ->schema([
                     RichEditor::make('content')
+                        ->fileAttachmentsAcceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                        ->fileAttachmentsMaxSize(4096)
+                        ->preventFileAttachmentPathTampering()
                         ->label('Детальное описание (HTML)')
                         ->columnSpanFull(),
                 ])

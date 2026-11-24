@@ -54,7 +54,10 @@ class ProjectResource extends Resource
                 ->label('Превью проекта')
                 ->disk('public')
                 ->directory('projects/preview')
-                ->image(),
+                ->image()
+                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->maxSize(4096)
+                ->preventFilePathTampering(),
 
             FileUpload::make('detail_image')
                 ->label('Детальное изображение')
@@ -62,6 +65,9 @@ class ProjectResource extends Resource
                 ->directory('projects/detail')
                 ->visibility('public')
                 ->image()
+                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->maxSize(4096)
+                ->preventFilePathTampering()
                 ->imageEditor(),
 
             Textarea::make('excerpt')
@@ -69,6 +75,9 @@ class ProjectResource extends Resource
                 ->rows(3),
 
             RichEditor::make('content')
+                ->fileAttachmentsAcceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                ->fileAttachmentsMaxSize(4096)
+                ->preventFileAttachmentPathTampering()
                 ->label('Детальное описание')
                 ->columnSpanFull(),
 
@@ -90,6 +99,9 @@ class ProjectResource extends Resource
                             FileUpload::make('image')
                                 ->label('Изображение')
                                 ->image()
+                                ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
+                                ->maxSize(4096)
+                                ->preventFilePathTampering()
                                 ->disk('public')
                                 ->directory('projects/gallery')
                                 ->required(),
